@@ -8,8 +8,18 @@ import System.FilePath
 import Data.List
 
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = hakyllWith config do
 
+config :: Configuration
+config = defaultConfiguration
+    { destinationDirectory = "docs"
+    , previewPort          = 5000
+    }
+
+
+-- https://robertwpearce.com/hakyll-pt-1-setup-initial-customization.html
+
+{-
 -- | Default configuration for a hakyll application
 defaultConfiguration :: Configuration
 defaultConfiguration = Configuration
@@ -37,3 +47,4 @@ defaultConfiguration = Configuration
     where
 
     fileName = takeFileName path
+-}
