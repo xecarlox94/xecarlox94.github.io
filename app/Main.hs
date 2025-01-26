@@ -12,10 +12,10 @@ main = hakyllWith config do
 
 config :: Configuration
 config = defaultConfiguration
-    { destinationDirectory = "docs"
-    , previewPort          = 5000
+    { destinationDirectory  = "docs"
+    , previewPort           = 5000
+    , providerDirectory     = "src"
     }
-
 
 -- https://robertwpearce.com/hakyll-pt-1-setup-initial-customization.html
 
