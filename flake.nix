@@ -3,31 +3,27 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    inputs.flake-utils.url = "github:numtide/flake-utils";
   };
 
   outputs = { nixpkgs, ... }: {
 
-    devShells.x86_64-linux.default =
+    flake-utils.lib.eachDefaultSystem (system: {
+
       let
-        pkgs = import nixpkgs { system = "x86_64-linux"; };
+
+        pkgs = import nixpkgs { inherit system; };
+
       in
-      with pkgs;
-        mkShell {
-
-          packages = [
-            cabal-install
-            zlib
-          ] ++
-          ( with haskellPackages; [
-              hakyll
-            ]
-          );
-
-          shellHook = ''
-            export DEBUG=1
-          '';
-
+      {
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            zola
+          ];
         };
+      }
+
+    });
 
   };
 }
