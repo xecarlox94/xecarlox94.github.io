@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+    <!-- Enable responsiveness on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+      
+        <meta name="description" content="Personal Website" />
+        <meta property="og:description" content="Personal Website" />
+        <meta property="twitter:description" content="Personal Website" />
+      
+    
+
+    <!-- Title -->
+      
+
+    <title>
+    
+    Let&#x27;s Build a (Mini)Shell in Rust
+    
+</title>
+    <meta property="og:title" content="My Website" />
+    <meta name="twitter:title" content="My Website" />
+
+    <!-- Additional Facebook Meta Tags -->
+    <meta property="og:site_name" content="My Website" />
+    <meta
+      property="og:url"
+      content="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;minishell&#x2F;"
+    />
+    <meta
+      property="og:type"
+      content="article"
+    />
+    <meta property="og:title" content="Let&#x27;s Build a (Mini)Shell in Rust" />
+    <meta
+      property="og:image"
+      content="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/web-app-manifest-512x512.png"
+    />
+
+    <!-- Additional Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;minishell&#x2F;"
+    />
+    <meta name="twitter:title" content="Let&#x27;s Build a (Mini)Shell in Rust" />
+    <meta
+      name="twitter:image"
+      content="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/web-app-manifest-512x512.png"
+    />
+
+    <!-- Favicons -->
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/favicon.svg"
+    />
+    <link
+      rel="shortcut icon"
+      href="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="Let&#x27;s Build a (Mini)Shell in Rust" />
+    <link
+      rel="manifest"
+      href="https:&#x2F;&#x2F;xecarlox94.github.io&#x2F;/icons/favicon/site.webmanifest"
+    />
+    
+
+    <!-- RSS Feed -->
+    
+
+    <!-- Load Styles -->
+    
+
+
+      <link
+        rel="stylesheet"
+        href="https://xecarlox94.github.io/site.css"
+      />
+    
+
+<!-- Custom styling -->
+<link
+  rel="stylesheet"
+  href="https://xecarlox94.github.io/custom.css"
+/>
+
+
+
+    <!-- Load Fonts -->
+    <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+    <!-- Pass Theme Preference as Data Attribute -->
+    <script src="https://xecarlox94.github.io/js/init-theme.js"></script>
+
+    <!-- Reference return to click position script -->
+    <script defer src="https://xecarlox94.github.io/js/reference-return.js"></script>
+
+    <!-- Additional scripts -->
+    
+      
+        <script defer src="https://xecarlox94.github.io/js/codeblock.js"></script>
+      
+      
+        <script src="https://xecarlox94.github.io/js/toggle-theme.js"></script>
+      
+      
+<!-- MathJax script for rendering LaTeX math equations -->
+<script src="https://xecarlox94.github.io/js/mathjax-config.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"
+  async
+></script>
+
+
+      
+<script type="text/javascript" src="https://xecarlox94.github.io/elasticlunr.min.js"></script>
+<script type="text/javascript" src="https://xecarlox94.github.io/js/search.js"></script>
+
+    
+  </head>
+
+  <!-- Body element (contents of the page) -->
+  <body class="hack main container">
+    
+
+  
+    
+    
+      
+  
+  <section class="nav-header">
+    <nav
+      itemscope
+      itemtype="http://schema.org/SiteNavigationElement"
+      class="navbar"
+    >
+      <section class="nav-links">
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://xecarlox94.github.io//"
+        >
+          <span itemprop="name">Home</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://xecarlox94.github.io//categories"
+        >
+          <span itemprop="name">Categories</span>
+        </a>
+        
+        <a
+          itemprop="url"
+          class=""
+          href="https://xecarlox94.github.io//tags"
+        >
+          <span itemprop="name">Tags</span>
+        </a>
+        
+      </section>
+    </nav>
+    <aside class="user-actions-container">
+      
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        class="search-icon"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        />
+      </svg>
+      <input type="text" id="search" placeholder="Search..." />
+      <section class="search-results" aria-live="polite">
+        <article class="search-results__items" role="list"></article>
+      </section>
+       
+      <a id="dark-mode-toggle" href="#">
+        <img
+          src="https://xecarlox94.github.io/icons/sun.svg"
+          id="sun-icon"
+          style="filter: invert(1)"
+          alt="Light mode"
+        />
+        <img
+          src="https://xecarlox94.github.io/icons/moon.svg"
+          id="moon-icon"
+          alt="Dark mode"
+        />
+      </a>
+        
+      <a
+        href="https:&#x2F;&#x2F;github.com&#x2F;micahkepe"
+        class="feed-icon"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="https://xecarlox94.github.io/icons/github.svg"
+          id="github-icon"
+          alt="GitHub"
+          class="social-icon"
+        />
+      </a>
+      
+    </aside>
+  </section>
+  
+
+    
+
+
+    <main>
+      
+
+<article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+        <h1 itemprop="headline">Let&#x27;s Build a (Mini)Shell in Rust</h1>
+        <data class="muted">
+    <svg class="icon i-clock" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <circle cx="16" cy="16" r="14"/>
+        <path d="M16 8 L16 16 20 20"/>
+    </svg>
+    <data>9 minute read</data>
+    <svg class="icon i-edit" viewBox="0 0 32 32"
+         width="16" height="16" fill="none" stroke="currentcolor"
+         stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+        <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"/>
+    </svg>
+
+    Published: 2025-05-31
+</data>
+    </header>
+
+    <article itemprop="articleBody">
+        
+            <!-- If no summary separate from content, just render content -->
+            <pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// src/main.rs
+</span><span>
+</span><span style="color:#b48ead;">use </span><span>std::io::{</span><span style="color:#bf616a;">self</span><span>, Write};
+</span><span>
+</span><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() {
+</span><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span><span>        print!(&quot;</span><span style="color:#a3be8c;">&gt; </span><span>&quot;);
+</span><span>        io::stdout().</span><span style="color:#96b5b4;">flush</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let mut</span><span> input = String::new();
+</span><span>        </span><span style="color:#b48ead;">match </span><span>io::stdin().</span><span style="color:#96b5b4;">read_line</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> input) {
+</span><span>            Ok(_) =&gt; {
+</span><span>                </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span><span>
+</span><span>                </span><span style="color:#65737e;">// skip empty input
+</span><span>                </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span><span>                    </span><span style="color:#b48ead;">continue</span><span>;
+</span><span>                }
+</span><span>
+</span><span>                </span><span style="color:#65737e;">// Parse the input into command and arguments
+</span><span>                </span><span style="color:#b48ead;">let mut</span><span> parts = input.</span><span style="color:#96b5b4;">split_whitespace</span><span>();
+</span><span>                </span><span style="color:#b48ead;">let</span><span> command = parts.</span><span style="color:#96b5b4;">next</span><span>().</span><span style="color:#96b5b4;">unwrap</span><span>();
+</span><span>                </span><span style="color:#b48ead;">let</span><span> args: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; = parts.</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">Command: </span><span style="color:#d08770;">{}</span><span>&quot;, command);
+</span><span>                println!(&quot;</span><span style="color:#a3be8c;">Arguments: </span><span style="color:#d08770;">{:?}</span><span>&quot;, args);
+</span><span>            }
+</span><span>            Err(error) =&gt; {
+</span><span>                eprintln!(&quot;</span><span style="color:#a3be8c;">Error reading input: </span><span style="color:#d08770;">{}</span><span>&quot;, error);
+</span><span>                </span><span style="color:#b48ead;">break</span><span>;
+</span><span>            }
+</span><span>        }
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<p>Now when we enter a command like <code>ls -la</code>, the shell will parse it into:</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>Command: ls
+</span><span>Arguments: [&quot;-la&quot;]
+</span></code></pre>
+<p>Obviously, this is very basic parsing, and it doesn't handle multiple commands
+and/or piping, but we will fix that later. For now, we have a basic shell that
+can read input from the user and parse that input into a command and its
+arguments.</p>
+<h2 id="executing-commands">Executing Commands</h2>
+<p>We now have a basic shell that can read input from the user and parse that
+input into a sequence of commands that can be executed by spawning new
+processes. However, not all commands are equally handled by the shell, leading
+to the need for built-in commands and understanding how shells create processes.</p>
+<h3 id="how-shells-create-process">How Shells Create Process</h3>
+<p>Before we execute commands, I think a little background on how shells create
+processes is in order. When a shell executes a command, it typically does so
+by creating a new process, a process being an instance of a running program.</p>
+<p>In Unix-like systems, this is done using the <code>fork</code> and <code>exec</code> system calls:</p>
+<ol>
+<li><strong>Fork</strong>: The shell creates a new process by duplicating itself using the
+<a href="https://man7.org/linux/man-pages/man2/fork.2.html"><code>fork</code></a> system call.
+This creates a child process that is an <strong>exact copy</strong> of the parent shell
+process (this will become important later).</li>
+<li><strong>Exec</strong>: The shell then replaces the child process's memory space with the
+new command using the
+<a href="https://man7.org/linux/man-pages/man3/exec.3.html"><code>exec</code></a> system call.
+This means that the child process is now running the new command, but it
+still has the same process ID (PID) as the original shell.</li>
+</ol>
+<p>As a result, the child process can run independently of the parent shell,
+and the shell can continue to run and accept new commands. When the child
+process finishes executing the command, it can return an exit status to the
+parent shell, which can then display the result to the user.</p>
+<blockquote>
+<p>Even though these details are abstracted away in Rust, they are still
+important to understand how our shell will work. When we execute a command,
+we will use the <code>Command</code> struct from the <code>std::process</code> module, which
+internally handles the <code>fork</code> and <code>exec</code> system calls for us. The <code>Command</code>
+struct provides a convenient way to spawn new processes and pass arguments to
+them.</p>
+</blockquote>
+<h3 id="built-in-commands">Built-in Commands</h3>
+<p>With this in mind, the method of creating processes necessitates why shells
+have built-in commands like <code>cd</code> (change directory) or <code>exit</code>. These commands
+<strong>must</strong> be handled by the shell itself rather than being passed to the
+operating system.</p>
+<p>Why? Take for example the case of <code>cd</code>. Remember that when we <code>fork</code> a new
+process, it is a <strong>copy</strong> of the parent shell. If we were to <code>exec</code> a command
+like <code>cd</code>, it would change the directory of the child process, but once that
+child process exits, the parent shell's working directory would remain
+unchanged. Thus, the shell must handle <code>cd</code> itself to change its own working
+directory. In a similar vein, the <code>exit</code> command must also be handled by the
+shell as it needs to terminate the shell process itself, not just a child
+process.</p>
+<pre data-lang="text" style="background-color:#2b303b;color:#c0c5ce;" class="language-text "><code class="language-text" data-lang="text"><span>Shell Process (Working Directory: /home/user)
+</span><span>    |
+</span><span>    └── Child Process: `cd /tmp` (Working Directory: /tmp)
+</span><span>        [Process exits, directory change is lost]
+</span><span>    |
+</span><span>Shell Process (Working Directory: still /home/user!)
+</span></code></pre>
+<h4 id="implementing-cd-and-exit-built-in-commands">Implementing <code>cd</code> and <code>exit</code> Built-in Commands</h4>
+<p>Let's implement the <code>cd</code> and <code>exit</code> built-in commands in our shell. We'll
+add a match arm to handle these commands before we attempt to execute any
+external commands. Here's how we can do that:</p>
+<pre data-linenos data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><table><tbody><tr><td>1</td><td><span style="color:#b48ead;">use </span><span>std::{
+</span></td></tr><tr><td>2</td><td><span>    env,
+</span></td></tr><tr><td>3</td><td><span>    error::Error,
+</span></td></tr><tr><td>4</td><td><span>    io::{stdin, stdout, Write},
+</span></td></tr><tr><td>5</td><td><span>    path::Path,
+</span></td></tr><tr><td>6</td><td><span>};
+</span></td></tr><tr><td>7</td><td><span>
+</span></td></tr><tr><td>8</td><td><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+</span></td></tr><tr><td>9</td><td><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span></td></tr><tr><td>10</td><td><span>        print!(&quot;</span><span style="color:#a3be8c;">&gt; </span><span>&quot;);
+</span></td></tr><tr><td>11</td><td><span>        </span><span style="color:#96b5b4;">stdout</span><span>().</span><span style="color:#96b5b4;">flush</span><span>()?;
+</span></td></tr><tr><td>12</td><td><span>
+</span></td></tr><tr><td>13</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> input = String::new();
+</span></td></tr><tr><td>14</td><td><span>        </span><span style="color:#96b5b4;">stdin</span><span>().</span><span style="color:#96b5b4;">read_line</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> input)?;
+</span></td></tr><tr><td>15</td><td><span>        </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span></td></tr><tr><td>16</td><td><span>
+</span></td></tr><tr><td>17</td><td><span>        </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span></td></tr><tr><td>18</td><td><span>            </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>19</td><td><span>        }
+</span></td></tr><tr><td>20</td><td><span>
+</span></td></tr><tr><td>21</td><td><span>        </span><span style="color:#65737e;">// Parse the input into command and arguments
+</span></td></tr><tr><td>22</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> parts = input.</span><span style="color:#96b5b4;">split_whitespace</span><span>();
+</span></td></tr><tr><td>23</td><td><span>        </span><span style="color:#b48ead;">let </span><span>Some(command) = parts.</span><span style="color:#96b5b4;">next</span><span>() </span><span style="color:#b48ead;">else </span><span>{
+</span></td></tr><tr><td>24</td><td><span>            </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>25</td><td><span>        };
+</span></td></tr><tr><td>26</td><td><span>        </span><span style="color:#b48ead;">let</span><span> args: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; = parts.</span><span style="color:#96b5b4;">collect</span><span>();
+</span></td></tr><tr><td>27</td><td><span>
+</span></td></tr><tr><td>28</td><td><span>        </span><span style="color:#65737e;">// Handle built-in commands first
+</span></td></tr><tr><td>29</td><td><span>        </span><span style="color:#b48ead;">match</span><span> command {
+</span></td></tr><tr><td>30</td><td><span>            &quot;</span><span style="color:#a3be8c;">cd</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>31</td><td><span>                </span><span style="color:#65737e;">// Handle cd command - must be done by shell itself
+</span></td></tr><tr><td>32</td><td><span>                </span><span style="color:#b48ead;">let</span><span> new_dir = args.</span><span style="color:#96b5b4;">first</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&amp;&quot;</span><span style="color:#a3be8c;">/</span><span>&quot;);
+</span></td></tr><tr><td>33</td><td><span>                </span><span style="color:#b48ead;">let</span><span> root = Path::new(new_dir);
+</span></td></tr><tr><td>34</td><td><span>                </span><span style="color:#b48ead;">if let </span><span>Err(e) = env::set_current_dir(root) {
+</span></td></tr><tr><td>35</td><td><span>                    eprintln!(&quot;</span><span style="color:#a3be8c;">cd: </span><span style="color:#d08770;">{}</span><span>&quot;, e);
+</span></td></tr><tr><td>36</td><td><span>                }
+</span></td></tr><tr><td>37</td><td><span>            }
+</span></td></tr><tr><td>38</td><td><span>            &quot;</span><span style="color:#a3be8c;">exit</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>39</td><td><span>                </span><span style="color:#65737e;">// Handle exit command - terminate the shell
+</span></td></tr><tr><td>40</td><td><span>                println!(&quot;</span><span style="color:#a3be8c;">Goodbye!</span><span>&quot;);
+</span></td></tr><tr><td>41</td><td><span>                </span><span style="color:#b48ead;">return </span><span>Ok(());
+</span></td></tr><tr><td>42</td><td><span>            }
+</span></td></tr><tr><td>43</td><td><span>            </span><span style="color:#65737e;">// All other commands are external commands
+</span></td></tr><tr><td>44</td><td><span>            command =&gt; {
+</span></td></tr><tr><td>45</td><td><span>                println!(
+</span></td></tr><tr><td>46</td><td><span>                    &quot;</span><span style="color:#a3be8c;">Executing external command: </span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;"> with args: </span><span style="color:#d08770;">{:?}</span><span>&quot;,
+</span></td></tr><tr><td>47</td><td><span>                    command, args
+</span></td></tr><tr><td>48</td><td><span>                );
+</span></td></tr><tr><td>49</td><td><span>                </span><span style="color:#65737e;">// We&#39;ll implement this in the next step
+</span></td></tr><tr><td>50</td><td><span>            }
+</span></td></tr><tr><td>51</td><td><span>        }
+</span></td></tr><tr><td>52</td><td><span>    }
+</span></td></tr><tr><td>53</td><td><span>}
+</span></td></tr><tr><td>54</td><td><span>
+</span></td></tr></tbody></table></code></pre>
+<article class="note-container">
+  <details open class="note-details">
+    <summary class="note-header">
+      
+      <section class="note-icon">
+        <p>Note</p>
+
+      </section>
+      
+    </summary>
+    <section class="note-content">
+      <p>The revised <code>main</code> function signature now returns a <code>Result&lt;(), Box&lt;dyn Error&gt;&gt;</code>, which allows us to handle errors more gracefully with <code>?</code> instead of
+panicking.</p>
+
+    </section>
+  </details>
+</article>
+<p>In this new version, we do the same whitespace splitting as before to get
+the command and its arguments. Next, in the match expression, we check
+if the command is <code>cd</code> or <code>exit</code>.</p>
+<p>Looking a little closer at the <code>cd</code> command, we use the <code>env::set_current_dir</code>
+function to change the current working directory of the shell process. If the
+directory change fails (for example, if the directory does not exist), we
+print an error message to the user. The <code>unwrap_or(&amp;"/")</code> ensures that if no
+argument is provided, we default to the root directory <code>/</code>.</p>
+<blockquote>
+<p>You might be asking when not use <code>~</code> as the default directory? The reason is
+that <code>~</code> is a shell-specific shorthand for the user's home directory, and it
+is not universally recognized by all shells. Using <code>/</code> as the default ensures
+that our shell behaves consistently across different environments, as <code>/</code> is
+the root directory in Unix-like systems. If you want to support <code>~</code>, you
+would need to expand it to the user's home directory using <code>dirs::home_dir()</code>
+from the <a href="https://crates.io/crates/dirs"><code>dirs</code> crate</a>. This is left as a
+future exercise for the reader.</p>
+</blockquote>
+<p>In our implementation we just support the <code>cd</code> and <code>exit</code> built-in commands,
+but for a complete, POSIX-compliant shell, there are many more built-in
+commands that would need to be implemented, such as <code>export</code>, <code>alias</code>, and
+<code>source</code>. For a complete list, see section <a href="https://pubs.opengroup.org/onlinepubs/9699919799.2018edition/">1.6 Built-In Utilities</a>
+in the latest POSIX standard.</p>
+<h2 id="executing-external-commands">Executing External Commands</h2>
+<p>Now that we have the built-in commands handled, we can implement the logic to
+execute external commands. We'll use the <code>Command</code> struct from the <code>std::process</code>
+module to spawn new processes. The <code>Command</code> struct provides a convenient way
+to create and configure a new process, including setting the command to run,
+passing arguments, and handling input/output streams.</p>
+<p>To execute an external command, we can use the <code>Command::new</code> method to
+create a new command, and then we can call the <code>spawn</code> method to run the command
+in a new process. For example, to run the <code>ls -la</code> command, we can do the
+following:</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">use </span><span>std::process::Command;
+</span><span>
+</span><span style="color:#65737e;">// use Builder pattern to create a new command
+</span><span style="color:#b48ead;">let</span><span> output = Command::new(&quot;</span><span style="color:#a3be8c;">ls</span><span>&quot;) </span><span style="color:#65737e;">// create a new command
+</span><span>    .</span><span style="color:#96b5b4;">arg</span><span>(&quot;</span><span style="color:#a3be8c;">-la</span><span>&quot;) </span><span style="color:#65737e;">// add argument(s)
+</span><span>    .</span><span style="color:#96b5b4;">output</span><span>() </span><span style="color:#65737e;">// execute the command and capture output
+</span><span>    .</span><span style="color:#96b5b4;">expect</span><span>(&quot;</span><span style="color:#a3be8c;">Failed to execute command</span><span>&quot;); </span><span style="color:#65737e;">// handle any errors
+</span></code></pre>
+<p>This will run the <code>ls -la</code> command and capture its output. The <code>output</code> method
+returns a <code>Result&lt;Output&gt;</code>, where <code>Output</code> contains the standard output and
+standard error of the command. We can then print the output to the user.</p>
+<p>For our shell, we'll primarily use <code>spawn()</code> because we want to control when to
+wait for the process to complete.</p>
+<p>Let's integrate this into our shell, so that it can execute external commands:</p>
+<pre data-linenos data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><table><tbody><tr><td>1</td><td><span style="color:#b48ead;">use </span><span>std::{
+</span></td></tr><tr><td>2</td><td><span>    env,
+</span></td></tr><tr><td>3</td><td><span>    error::Error,
+</span></td></tr><tr><td>4</td><td><span>    io::{stdin, stdout, Write},
+</span></td></tr><tr><td>5</td><td><span>    path::Path,
+</span></td></tr><tr><td>6</td><td><span>    process::Command,
+</span></td></tr><tr><td>7</td><td><span>};
+</span></td></tr><tr><td>8</td><td><span>
+</span></td></tr><tr><td>9</td><td><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+</span></td></tr><tr><td>10</td><td><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span></td></tr><tr><td>11</td><td><span>        print!(&quot;</span><span style="color:#a3be8c;">&gt; </span><span>&quot;);
+</span></td></tr><tr><td>12</td><td><span>        </span><span style="color:#96b5b4;">stdout</span><span>().</span><span style="color:#96b5b4;">flush</span><span>()?;
+</span></td></tr><tr><td>13</td><td><span>
+</span></td></tr><tr><td>14</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> input = String::new();
+</span></td></tr><tr><td>15</td><td><span>        </span><span style="color:#96b5b4;">stdin</span><span>().</span><span style="color:#96b5b4;">read_line</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> input)?;
+</span></td></tr><tr><td>16</td><td><span>        </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span></td></tr><tr><td>17</td><td><span>
+</span></td></tr><tr><td>18</td><td><span>        </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span></td></tr><tr><td>19</td><td><span>            </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>20</td><td><span>        }
+</span></td></tr><tr><td>21</td><td><span>
+</span></td></tr><tr><td>22</td><td><span>        </span><span style="color:#65737e;">// Parse the input into command and arguments
+</span></td></tr><tr><td>23</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> parts = input.</span><span style="color:#96b5b4;">split_whitespace</span><span>();
+</span></td></tr><tr><td>24</td><td><span>        </span><span style="color:#b48ead;">let </span><span>Some(command) = parts.</span><span style="color:#96b5b4;">next</span><span>() </span><span style="color:#b48ead;">else </span><span>{
+</span></td></tr><tr><td>25</td><td><span>            </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>26</td><td><span>        };
+</span></td></tr><tr><td>27</td><td><span>        </span><span style="color:#b48ead;">let</span><span> args: Vec&lt;&amp;</span><span style="color:#b48ead;">str</span><span>&gt; = parts.</span><span style="color:#96b5b4;">collect</span><span>();
+</span></td></tr><tr><td>28</td><td><span>
+</span></td></tr><tr><td>29</td><td><span>        </span><span style="color:#65737e;">// Handle built-in commands first
+</span></td></tr><tr><td>30</td><td><span>        </span><span style="color:#b48ead;">match</span><span> command {
+</span></td></tr><tr><td>31</td><td><span>            &quot;</span><span style="color:#a3be8c;">cd</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>32</td><td><span>                </span><span style="color:#b48ead;">let</span><span> new_dir = args.</span><span style="color:#96b5b4;">first</span><span>().</span><span style="color:#96b5b4;">unwrap_or</span><span>(&amp;&quot;</span><span style="color:#a3be8c;">/</span><span>&quot;);
+</span></td></tr><tr><td>33</td><td><span>                </span><span style="color:#b48ead;">let</span><span> root = Path::new(new_dir);
+</span></td></tr><tr><td>34</td><td><span>                </span><span style="color:#b48ead;">if let </span><span>Err(e) = env::set_current_dir(root) {
+</span></td></tr><tr><td>35</td><td><span>                    eprintln!(&quot;</span><span style="color:#a3be8c;">cd: </span><span style="color:#d08770;">{}</span><span>&quot;, e);
+</span></td></tr><tr><td>36</td><td><span>                }
+</span></td></tr><tr><td>37</td><td><span>            }
+</span></td></tr><tr><td>38</td><td><span>            &quot;</span><span style="color:#a3be8c;">exit</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>39</td><td><span>                println!(&quot;</span><span style="color:#a3be8c;">Goodbye!</span><span>&quot;);
+</span></td></tr><tr><td>40</td><td><span>                </span><span style="color:#b48ead;">return </span><span>Ok(());
+</span></td></tr><tr><td>41</td><td><span>            }
+</span></td></tr><tr><td>42</td><td><span>            </span><span style="color:#65737e;">// All other commands are external commands
+</span></td></tr><tr><td>43</td><td><span>            command =&gt; {
+</span></td></tr><tr><td>44</td><td><span>                </span><span style="color:#65737e;">// Create a Command struct to spawn the external process
+</span></td></tr><tr><td>45</td><td><span>                </span><span style="color:#b48ead;">let mut</span><span> cmd = Command::new(command);
+</span></td></tr><tr><td>46</td><td><span>                cmd.</span><span style="color:#96b5b4;">args</span><span>(&amp;args);
+</span></td></tr><tr><td>47</td><td><span>
+</span></td></tr><tr><td>48</td><td><span>                </span><span style="color:#65737e;">// Spawn the child process and wait for it to complete
+</span></td></tr><tr><td>49</td><td><span>                </span><span style="color:#b48ead;">match</span><span> cmd.</span><span style="color:#96b5b4;">spawn</span><span>() {
+</span></td></tr><tr><td>50</td><td><span>                    Ok(</span><span style="color:#b48ead;">mut</span><span> child) =&gt; {
+</span></td></tr><tr><td>51</td><td><span>                        </span><span style="color:#65737e;">// Wait for the child process to finish
+</span></td></tr><tr><td>52</td><td><span>                        </span><span style="color:#b48ead;">match</span><span> child.</span><span style="color:#96b5b4;">wait</span><span>() {
+</span></td></tr><tr><td>53</td><td><span>                            Ok(status) =&gt; {
+</span></td></tr><tr><td>54</td><td><span>                                </span><span style="color:#b48ead;">if </span><span>!status.</span><span style="color:#96b5b4;">success</span><span>() {
+</span></td></tr><tr><td>55</td><td><span>                                    eprintln!(&quot;</span><span style="color:#a3be8c;">Command &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39; failed with exit code: </span><span style="color:#d08770;">{:?}</span><span>&quot;,
+</span></td></tr><tr><td>56</td><td><span>                                            command, status.</span><span style="color:#96b5b4;">code</span><span>());
+</span></td></tr><tr><td>57</td><td><span>                                }
+</span></td></tr><tr><td>58</td><td><span>                            }
+</span></td></tr><tr><td>59</td><td><span>                            Err(e) =&gt; {
+</span></td></tr><tr><td>60</td><td><span>                                eprintln!(&quot;</span><span style="color:#a3be8c;">Failed to wait for command &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, command, e);
+</span></td></tr><tr><td>61</td><td><span>                            }
+</span></td></tr><tr><td>62</td><td><span>                        }
+</span></td></tr><tr><td>63</td><td><span>                    }
+</span></td></tr><tr><td>64</td><td><span>                    Err(e) =&gt; {
+</span></td></tr><tr><td>65</td><td><span>                        eprintln!(&quot;</span><span style="color:#a3be8c;">Failed to execute command &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, command, e);
+</span></td></tr><tr><td>66</td><td><span>                    }
+</span></td></tr><tr><td>67</td><td><span>                }
+</span></td></tr><tr><td>68</td><td><span>            }
+</span></td></tr><tr><td>69</td><td><span>        }
+</span></td></tr><tr><td>70</td><td><span>    }
+</span></td></tr><tr><td>71</td><td><span>}
+</span></td></tr></tbody></table></code></pre>
+<p>Now for any external command:</p>
+<ol>
+<li>We create a <code>Command</code> instance using <code>Command::new(command)</code>, passing the
+command name as an argument.</li>
+<li>We then add any additional arguments using <code>cmd.args(&amp;args)</code>.</li>
+<li>Call <code>cmd.spawn()</code> to execute the command in a new process.</li>
+</ol>
+<p>The <code>spawn</code> method returns a <code>Result&lt;Child&gt;</code>, where <code>Child</code> represents the spawned process. We
+then wait for the child process to finish using <code>child.wait()</code>, which returns
+a <code>Result&lt;ExitStatus&gt;</code>. If the command fails to execute, we print an error
+message to the user. If the command succeeds, then it will output its
+results to the terminal via the standard output stream.</p>
+<h3 id="piping-commands">Piping Commands</h3>
+<p>One of the most powerful features of Unix shells is the ability to pipe the
+output of one command as input to another command. The pipe operator <code>|</code> allows
+you to chain commands together. For example, <code>ls | grep txt</code> would list files
+and then filter for those containing "txt". A major limitation of our current
+shell is that is only supports a single command at a time, so let's
+extend our shell to support piping commands together.</p>
+<p>The first thing we'll do is modify our input parsing to split the input on
+the pipe character <code>|</code> instead of whitespace. This will allow us to
+handle multiple commands in a single input line. We'll also store these
+commands in a <strong>peekable</strong> iterator. Why peekable? Because we want to
+check if there are more commands to process after the current one, so we can
+decide whether to pipe the output to the next command or not.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">// Split input on pipe characters to handle command chaining
+</span><span style="color:#b48ead;">let mut</span><span> commands = input.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">split</span><span>(&quot;</span><span style="color:#a3be8c;"> | </span><span>&quot;).</span><span style="color:#96b5b4;">peekable</span><span>();
+</span></code></pre>
+<p>Since we are now dealing with multiple commands, we need to keep track of
+the output of the previous command so that we can pipe it to the next command,
+if there is one. Additionally, we want to track all of the child processes that
+we spawn so that we can wait for them to finish later.</p>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">let mut</span><span> prev_stdout = None; </span><span style="color:#65737e;">// This will hold the output of the previous command
+</span><span style="color:#b48ead;">let mut</span><span> children: Vec&lt;Child&gt; = Vec::new(); </span><span style="color:#65737e;">// This will hold all child processes we spawn
+</span></code></pre>
+<p>Next, we will loop through each command in the pipeline, parsing it into
+the command name and its arguments, and then executing it. If the command is
+<code>cd</code> or <code>exit</code>, we handle it as before. For external commands, we will set up
+the <code>stdin</code> and <code>stdout</code> streams based on whether there is a previous command
+to pipe from or if it is the last command in the pipeline. If there is a
+previous command, we will use its output as the input for the current command.</p>
+<p>Putting it all together, our updated shell now looks like this:</p>
+<pre data-linenos data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><table><tbody><tr><td>1</td><td><span style="color:#b48ead;">use </span><span>std::{
+</span></td></tr><tr><td>2</td><td><span>    env,
+</span></td></tr><tr><td>3</td><td><span>    error::Error,
+</span></td></tr><tr><td>4</td><td><span>    io::{stdin, stdout, Write},
+</span></td></tr><tr><td>5</td><td><span>    path::Path,
+</span></td></tr><tr><td>6</td><td><span>    process::{Child, Command, Stdio},
+</span></td></tr><tr><td>7</td><td><span>};
+</span></td></tr><tr><td>8</td><td><span>
+</span></td></tr><tr><td>9</td><td><span style="color:#b48ead;">fn </span><span style="color:#8fa1b3;">main</span><span>() -&gt; Result&lt;(), Box&lt;dyn Error&gt;&gt; {
+</span></td></tr><tr><td>10</td><td><span>    </span><span style="color:#b48ead;">loop </span><span>{
+</span></td></tr><tr><td>11</td><td><span>        print!(&quot;</span><span style="color:#a3be8c;">&gt; </span><span>&quot;);
+</span></td></tr><tr><td>12</td><td><span>        </span><span style="color:#96b5b4;">stdout</span><span>().</span><span style="color:#96b5b4;">flush</span><span>()?;
+</span></td></tr><tr><td>13</td><td><span>
+</span></td></tr><tr><td>14</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> input = String::new();
+</span></td></tr><tr><td>15</td><td><span>        </span><span style="color:#96b5b4;">stdin</span><span>().</span><span style="color:#96b5b4;">read_line</span><span>(&amp;</span><span style="color:#b48ead;">mut</span><span> input)?;
+</span></td></tr><tr><td>16</td><td><span>        </span><span style="color:#b48ead;">let</span><span> input = input.</span><span style="color:#96b5b4;">trim</span><span>();
+</span></td></tr><tr><td>17</td><td><span>
+</span></td></tr><tr><td>18</td><td><span>        </span><span style="color:#b48ead;">if</span><span> input.</span><span style="color:#96b5b4;">is_empty</span><span>() {
+</span></td></tr><tr><td>19</td><td><span>            </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>20</td><td><span>        }
+</span></td></tr><tr><td>21</td><td><span>
+</span></td></tr><tr><td>22</td><td><span>        </span><span style="color:#65737e;">// Split input on pipe characters to handle command chaining
+</span></td></tr><tr><td>23</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> commands = input.</span><span style="color:#96b5b4;">trim</span><span>().</span><span style="color:#96b5b4;">split</span><span>(&quot;</span><span style="color:#a3be8c;"> | </span><span>&quot;).</span><span style="color:#96b5b4;">peekable</span><span>();
+</span></td></tr><tr><td>24</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> prev_stdout = None;
+</span></td></tr><tr><td>25</td><td><span>        </span><span style="color:#b48ead;">let mut</span><span> children: Vec&lt;Child&gt; = Vec::new();
+</span></td></tr><tr><td>26</td><td><span>
+</span></td></tr><tr><td>27</td><td><span>        </span><span style="color:#65737e;">// Process each command in the pipeline
+</span></td></tr><tr><td>28</td><td><span>        </span><span style="color:#b48ead;">while let </span><span>Some(command) = commands.</span><span style="color:#96b5b4;">next</span><span>() {
+</span></td></tr><tr><td>29</td><td><span>            </span><span style="color:#b48ead;">let mut</span><span> parts = command.</span><span style="color:#96b5b4;">split_whitespace</span><span>();
+</span></td></tr><tr><td>30</td><td><span>            </span><span style="color:#b48ead;">let </span><span>Some(command) = parts.</span><span style="color:#96b5b4;">next</span><span>() </span><span style="color:#b48ead;">else </span><span>{
+</span></td></tr><tr><td>31</td><td><span>                </span><span style="color:#b48ead;">continue</span><span>;
+</span></td></tr><tr><td>32</td><td><span>            };
+</span></td></tr><tr><td>33</td><td><span>            </span><span style="color:#b48ead;">let</span><span> args = parts;
+</span></td></tr><tr><td>34</td><td><span>
+</span></td></tr><tr><td>35</td><td><span>            </span><span style="color:#b48ead;">match</span><span> command {
+</span></td></tr><tr><td>36</td><td><span>                &quot;</span><span style="color:#a3be8c;">cd</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>37</td><td><span>                    </span><span style="color:#65737e;">// Built-in: change directory
+</span></td></tr><tr><td>38</td><td><span>                    </span><span style="color:#b48ead;">let</span><span> new_dir = args.</span><span style="color:#96b5b4;">peekable</span><span>().</span><span style="color:#96b5b4;">peek</span><span>().</span><span style="color:#96b5b4;">map_or</span><span>(&quot;</span><span style="color:#a3be8c;">/</span><span>&quot;, |</span><span style="color:#bf616a;">x</span><span>| *x);
+</span></td></tr><tr><td>39</td><td><span>                    </span><span style="color:#b48ead;">let</span><span> root = Path::new(new_dir);
+</span></td></tr><tr><td>40</td><td><span>                    </span><span style="color:#b48ead;">if let </span><span>Err(e) = env::set_current_dir(root) {
+</span></td></tr><tr><td>41</td><td><span>                        eprintln!(&quot;</span><span style="color:#a3be8c;">cd: </span><span style="color:#d08770;">{}</span><span>&quot;, e);
+</span></td></tr><tr><td>42</td><td><span>                    }
+</span></td></tr><tr><td>43</td><td><span>                    </span><span style="color:#65737e;">// Reset prev_stdout since cd doesn&#39;t produce output
+</span></td></tr><tr><td>44</td><td><span>                    prev_stdout = None;
+</span></td></tr><tr><td>45</td><td><span>                }
+</span></td></tr><tr><td>46</td><td><span>                &quot;</span><span style="color:#a3be8c;">exit</span><span>&quot; =&gt; {
+</span></td></tr><tr><td>47</td><td><span>                    println!(&quot;</span><span style="color:#a3be8c;">Goodbye!</span><span>&quot;);
+</span></td></tr><tr><td>48</td><td><span>                    </span><span style="color:#b48ead;">return </span><span>Ok(());
+</span></td></tr><tr><td>49</td><td><span>                }
+</span></td></tr><tr><td>50</td><td><span>                command =&gt; {
+</span></td></tr><tr><td>51</td><td><span>                    </span><span style="color:#65737e;">// External command: set up stdin/stdout for piping
+</span></td></tr><tr><td>52</td><td><span>
+</span></td></tr><tr><td>53</td><td><span>                    </span><span style="color:#65737e;">// Input: either from previous command&#39;s output or inherit from shell
+</span></td></tr><tr><td>54</td><td><span>                    </span><span style="color:#b48ead;">let</span><span> stdin = </span><span style="color:#b48ead;">match</span><span> prev_stdout.</span><span style="color:#96b5b4;">take</span><span>() {
+</span></td></tr><tr><td>55</td><td><span>                        Some(output) =&gt; Stdio::from(output),
+</span></td></tr><tr><td>56</td><td><span>                        None =&gt; Stdio::inherit(),
+</span></td></tr><tr><td>57</td><td><span>                    };
+</span></td></tr><tr><td>58</td><td><span>
+</span></td></tr><tr><td>59</td><td><span>                    </span><span style="color:#65737e;">// Output: pipe to next command if there is one, otherwise inherit
+</span></td></tr><tr><td>60</td><td><span>                    </span><span style="color:#b48ead;">let</span><span> stdout = </span><span style="color:#b48ead;">if</span><span> commands.</span><span style="color:#96b5b4;">peek</span><span>().</span><span style="color:#96b5b4;">is_some</span><span>() {
+</span></td></tr><tr><td>61</td><td><span>                        Stdio::piped()  </span><span style="color:#65737e;">// More commands follow, so pipe output
+</span></td></tr><tr><td>62</td><td><span>                    } </span><span style="color:#b48ead;">else </span><span>{
+</span></td></tr><tr><td>63</td><td><span>                        Stdio::inherit()  </span><span style="color:#65737e;">// Last command, output to terminal
+</span></td></tr><tr><td>64</td><td><span>                    };
+</span></td></tr><tr><td>65</td><td><span>
+</span></td></tr><tr><td>66</td><td><span>                    </span><span style="color:#65737e;">// Spawn the command with configured stdin/stdout
+</span></td></tr><tr><td>67</td><td><span>                    </span><span style="color:#b48ead;">let</span><span> child = Command::new(command)
+</span></td></tr><tr><td>68</td><td><span>                        .</span><span style="color:#96b5b4;">args</span><span>(args)
+</span></td></tr><tr><td>69</td><td><span>                        .</span><span style="color:#96b5b4;">stdin</span><span>(stdin)
+</span></td></tr><tr><td>70</td><td><span>                        .</span><span style="color:#96b5b4;">stdout</span><span>(stdout)
+</span></td></tr><tr><td>71</td><td><span>                        .</span><span style="color:#96b5b4;">spawn</span><span>();
+</span></td></tr><tr><td>72</td><td><span>
+</span></td></tr><tr><td>73</td><td><span>                    </span><span style="color:#b48ead;">match</span><span> child {
+</span></td></tr><tr><td>74</td><td><span>                        Ok(</span><span style="color:#b48ead;">mut</span><span> child) =&gt; {
+</span></td></tr><tr><td>75</td><td><span>                            </span><span style="color:#65737e;">// Take ownership of stdout for next command in pipeline
+</span></td></tr><tr><td>76</td><td><span>                            prev_stdout = child.stdout.</span><span style="color:#96b5b4;">take</span><span>();
+</span></td></tr><tr><td>77</td><td><span>                            children.</span><span style="color:#96b5b4;">push</span><span>(child);
+</span></td></tr><tr><td>78</td><td><span>                        }
+</span></td></tr><tr><td>79</td><td><span>                        Err(e) =&gt; {
+</span></td></tr><tr><td>80</td><td><span>                            eprintln!(&quot;</span><span style="color:#a3be8c;">Failed to execute &#39;</span><span style="color:#d08770;">{}</span><span style="color:#a3be8c;">&#39;: </span><span style="color:#d08770;">{}</span><span>&quot;, command, e);
+</span></td></tr><tr><td>81</td><td><span>                            </span><span style="color:#b48ead;">break</span><span>;
+</span></td></tr><tr><td>82</td><td><span>                        }
+</span></td></tr><tr><td>83</td><td><span>                    }
+</span></td></tr><tr><td>84</td><td><span>                }
+</span></td></tr><tr><td>85</td><td><span>            }
+</span></td></tr><tr><td>86</td><td><span>        }
+</span></td></tr><tr><td>87</td><td><span>
+</span></td></tr><tr><td>88</td><td><span>        </span><span style="color:#65737e;">// Wait for all child processes to complete
+</span></td></tr><tr><td>89</td><td><span>        </span><span style="color:#b48ead;">for mut</span><span> child in children {
+</span></td></tr><tr><td>90</td><td><span>            </span><span style="color:#b48ead;">let </span><span>_ = child.</span><span style="color:#96b5b4;">wait</span><span>();
+</span></td></tr><tr><td>91</td><td><span>        }
+</span></td></tr><tr><td>92</td><td><span>    }
+</span></td></tr><tr><td>93</td><td><span>}
+</span></td></tr></tbody></table></code></pre>
+<p>Woohoo! Now our shell can handle multiple commands piped together!
+When you run the shell and enter a command like <code>ls | wc -l</code>, it
+will execute each command in the pipeline, passing the output of one command
+as the input to the next command, with the final output displayed in the
+terminal.</p>
+<section
+  style="width: 100%; max-width: 75%; margin: 0 auto; text-align: center;">
+  <img src="./images/piping-example.png"  alt="Example of piping commands in a shell" 
+    style="max-width: 100%; height: auto; display: inline-block;">
+  
+  <caption style="margin-top: 0.5em;">
+    <p style="font-style: italic;">Example of piping commands in a shell; `ls | wc -l` counts the number
+of files in the current directory</p>
+  </caption>
+  
+</section>
+<h2 id="footnotes">Footnotes</h2>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>This is a simplified version of the shell lifecycle. In reality, shells
+may have more complex lifecycles, especially when dealing with job control,
+background processes, and other advanced features.</p>
+<p>While technically you could classify a shell as a <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>
+(Read-Eval-Print Loop), the term REPL is more commonly used in the context
+of programming languages and interactive interpreters. A shell is more than
+just a REPL since it interacts with the operating systems and provides a
+more general command-line interface.</p>
+<p>If you are interested in the intricacies of shells, I recommend checking out
+the codebase of an existing shell, such as <a href="https://github.com/fish-shell/fish-shell">Fish</a>
+(my personal favorite), which is has been <a href="https://github.com/fish-shell/fish-shell/pull/9512">rewritten entirely in
+Rust</a>.</p>
+</div>
+
+        
+    </article>
+
+    <!-- Comment section -->
+    
+      
+        
+          <script
+  src="https://giscus.app/client.js"
+  data-repo="micahkepe&#x2F;blog"
+  data-repo-id="R_kgDONfHznQ"
+  data-category="General"
+  data-category-id="DIC_kwDONfHznc4CnQJ4"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="preferred_color_scheme"
+  data-lang="en"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async
+></script>
+
+        
+      
+    
+
+
+    <!-- Page footer -->
+    
+    <footer>
+        <hr>
+        <p>
+            
+                Published by Micah Kepe
+            
+            
+                
+                in <a href="https://xecarlox94.github.io/categories/tutorial/">tutorial</a>
+            
+            
+                and
+                tagged
+                
+                    <a href="https://xecarlox94.github.io/tags/rust/">rust</a>
+                    
+                        
+                            
+                                and
+                            
+                        
+                    
+                
+                    <a href="https://xecarlox94.github.io/tags/cli/">cli</a>
+                    
+                        
+                    
+                
+            
+        </p>
+        
+        
+    </footer>
+
+
+</article>
+
+
+    </main>
+    
+
+
+
+
+
+  </body>
+</html>
