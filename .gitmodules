@@ -1,0 +1,6 @@
+[submodule "themes/--force"]
+	path = themes/--force
+	url = https://github.com/micahkepe/radion
+[submodule "themes/radion"]
+	path = themes/radion
+	url = https://github.com/micahkepe/radion

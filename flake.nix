@@ -15,13 +15,8 @@
 
       in
       {
-        packages.default = pkgs.cowsay;
+        packages.default = pkgs.zola;
 
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            zola
-          ];
-        };
       }
     );
 }

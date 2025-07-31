@@ -1,8 +1,30 @@
-{% extends "base.html" %}
+{% extends "radion/templates/index.html" %}
+
+{% block styles %}
+
+{{ super() }}
+
+<!-- Custom styling -->
+<link
+  rel="stylesheet"
+  href="{{ get_url(path='custom.css', trailing_slash=false) | safe }}"
+/>
+
+{% endblock styles %}
 
 {% block content %}
-<h1 class="title">
-  This is my blog made with Zola.
-</h1>
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
+{{ super() }}
+
+{% if not page %}
+  <!-- Append shring.sh webring in home pages -->
+  <hr />
+  {% block shring %}
+  <section class="shring-webring">
+    <span>
+      <a href="https://shring.sh/micahkepe/previous">&laquo; prev</a> | <a href="https://shring.sh">shring</a> | <a href="https://shring.sh/micahkepe/next">next &raquo;</a>
+    </span>
+  </section>
+  {% endblock shring %}
+{% endif %}
+
 {% endblock content %}
