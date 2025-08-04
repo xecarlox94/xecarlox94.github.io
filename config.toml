@@ -31,9 +31,9 @@ index_format = "elasticlunr_json"
 
 [extra]
 # Put all your custom variables here
-radion_title = "Micah's Secret Blog"
-author = "Micah Kepe"
-github = "https://github.com/micahkepe"
+radion_title = "Jose's Website"
+author = "Jose Fernandes"
+github = "https://github.com/xecarlox94"
 radion_menu = [
     {url = "$BASE_URL/", name = "Home"},
     {url = "$BASE_URL/categories", name = "Categories"},
@@ -55,7 +55,7 @@ enable_search = true
 theme = "toggle" # options: {light, dark, auto, toggle}
 
 # # Comment sections
-comments = true
+comments = false
 giscus_repo = "micahkepe/blog"
 giscus_repo_id = "R_kgDONfHznQ"
 giscus_data_category_id = "DIC_kwDONfHznc4CnQJ4"
