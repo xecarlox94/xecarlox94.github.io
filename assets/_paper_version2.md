@@ -32,7 +32,7 @@ Rust systems software engineer with 1–2 years of professional Rust experience 
 ## Experience
 
 ### Rust Software Engineer · Enoda Ltd · UK
-**May 2024 – Present**
+**Mar 2025 – Present**
 
 Sole architect and lead Rust engineer on the ENSEMBLE™ aggregator platform — a market- and hardware-agnostic system for real-time bidding of grid capacity across TSO regions and metering device vendors, supporting the transition to renewable energy critical infrastructure.
 
