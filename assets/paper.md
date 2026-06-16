@@ -24,7 +24,8 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 
 **Languages:** Rust, Haskell, OCaml, C/C++, Nix, Java/Scala, Python, Terraform
 
-**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Arduino, Nvidia Jetson, Protocol Buffers (protobuf), HTTP/REST, WebSockets
+**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, Protocol Buffers (protobuf), Open Telemetry, HTTP/REST, WebSockets
+
 
 **Cloud:** Azure (Synapse, Functions, Batch, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
@@ -42,23 +43,33 @@ Part of the ENSEMBLE division building the aggregator: a market- and hardware-ag
 
 Architected and lead Rust engineer on the ENSEMBLE aggregator platform — a market- and hardware-agnostic system for real-time bidding of grid capacity across TSO regions and metering device vendors, supporting the transition to renewable energy critical infrastructure.
 
+Influenced the technical and business aspects of the application aligning the development of a new platform with global ambitions
+
+new platform, built its own primitives
+
+
 - Designed and implemented an actor-model application in Rust on tokio, comprising: a Core actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx; a Device actor for metering device communication over protobuf; and a WIRE actor for TSO grid command interfaces over HTTP/REST.
+<TODO: explain that the actor-model architecture is matching the functional requirements allowing effective tracking of current (and future changes) to specification>
 
 - Architected the system for vendor and market agnosticism: developed an SDK abstraction layer supporting multiple hardware vendors, and a pluggable market adapter pattern for different regional energy market APIs and different kinds of devices.
 
-<TODO: need to add open-telemetry>
+<TODO: need to finish open-telemetry>
+- installed a telemetry and observability layer, using open-telemetry, which traces every application and business logic operation and handles error handling
+alerting 
+monitoring
 
-- Engineered robust IO-bounded concurrency and resource safety using tokio primitives — channels, select!, cancellation tokens, and task trackers — with graceful supervision of resources and fault-tolerant shutdown of running instances.
+
+- Engineered robust IO-bounded concurrency and resource safety, leveraging tokio primitives, with graceful supervision of resources and fault-tolerant shutdown of running instances.
 
 - Built comprehensive test coverage across unit, integration, and property-based testing disciplines to ensure correctness ahead of production scale-up.
 
-- Currently in integration testing with a European TSO; platform architecture designed to scale from initial pilot deployments hundreds of thousands of devices, over multiple regions (and markets).
+- Currently in integration testing with an European TSO;
 
 ---
 ### Software Engineer · National Robotarium · Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
-Worked across a portfolio of industrial AI and robotics R&D projects for major UK industrial clients, progressing to project lead. Delivered production ready perception, data, and control systems from client brief through to on-site deployment, spanning computer vision, real-time robotics, conversational AI, and cloud data engineering.
+Worked across a portfolio of industrial AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer. Delivered production ready perception, data, and control systems from client on-site visit through to on-site deployment, spanning computer vision, real-time robotics, conversational AI, and cloud data engineering.
 
 - Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's productivity by 2% at the next TRL stage.
 
