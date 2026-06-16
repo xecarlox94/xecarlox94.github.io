@@ -7,14 +7,14 @@
 
 ## Professional Summary
 
-Systems software engineer specialising in software architecture of real-time, safety-critical Rust applications for industrial and energy infrastructure. Experienced in designing actor-model concurrent systems with Rust, integrating industrial protocols, and building reliable software for environments where correctness and resilience matter. Track record of leading multi-disciplinary engineering teams to deliver measurable outcomes for major industrial clients. Particularly interested in critical systems, verified software, and the intersection of robust engineering with complex operational domains.
+Systems software engineer specialising in software engineering and architecture of real-time, safety-critical Rust applications for industrial and critical infrastructure. Experienced in designing actor-model concurrent systems with Rust, integrating industrial protocols, and building reliable software for environments where correctness and resilience matter. Track record of leading multi-disciplinary engineering and research teams to deliver measurable outcomes for major industrial clients. Particularly interested in critical systems, verified software, and the intersection of robust engineering with complex operational domains.
 
 - v2
-Rust systems software engineer with 2 years of professional Rust experience designing and building concurrent, safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (Protobuf, HTTP/REST) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in computer vision, real-time robotics, and cloud data engineering.
+
+Rust systems software engineer with 1-2 years of professional Rust experience designing and building concurrent, safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (Protobuf, HTTP/REST) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering and research teams to deliver measurable production outcomes. Additional experience in computer vision, real-time robotics, and cloud data engineering.
 
 
 ---
-
 
 ## Skills
 
@@ -38,71 +38,35 @@ Rust systems software engineer with 2 years of professional Rust experience desi
 ### Rust Software Engineer · Enoda Ltd · UK
 **Mar 2025 – Present**
 
-Part of the ENSEMBLE™ division building the aggregator: a market- and hardware-agnostic
-platform that bids grid capacity in real time across TSO regions and metering device vendors,
-supporting the transition to renewable energy infrastructure.
+Part of the ENSEMBLE division building the aggregator: a market- and hardware-agnostic platform that bids grid capacity in real time across TSO regions and metering device vendors, supporting the transition to renewable energy infrastructure.
 
-- Designed and implemented an actor-model application in Rust on tokio, comprising: a Core
-  actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx;
-  a Device actor for metering device communication over Modbus and protobuf; and a WIRE actor
-  for TSO grid command interfaces over HTTP/REST.
+Architected and lead Rust engineer on the ENSEMBLE aggregator platform — a market- and hardware-agnostic system for real-time bidding of grid capacity across TSO regions and metering device vendors, supporting the transition to renewable energy critical infrastructure.
 
-- Architected the system for vendor and market agnosticism: developed an SDK abstraction layer
-  supporting multiple hardware vendors, and a pluggable market adapter pattern for different
-  regional energy market APIs.
+- Designed and implemented an actor-model application in Rust on tokio, comprising: a Core actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx; a Device actor for metering device communication over protobuf; and a WIRE actor for TSO grid command interfaces over HTTP/REST.
 
-- Engineered robust concurrency and resource safety using tokio primitives — channels, select!,
-  cancellation tokens, and task trackers — with graceful supervision of all actors and resources.
+- Architected the system for vendor and market agnosticism: developed an SDK abstraction layer supporting multiple hardware vendors, and a pluggable market adapter pattern for different regional energy market APIs and different kinds of devices.
 
-- Built extensive test coverage across unit, integration, and property-based testing disciplines
-  to ensure system correctness ahead of production scale-up.
+<TODO: need to add open-telemetry>
 
-- Currently in integration testing with a European TSO; platform architecture designed to scale
-  from initial pilot deployments to hundreds of thousands of devices.
+- Engineered robust IO-bounded concurrency and resource safety using tokio primitives — channels, select!, cancellation tokens, and task trackers — with graceful supervision of resources and fault-tolerant shutdown of running instances.
 
-
-- v2
-
-Architected and lead Rust engineer on the ENSEMBLE™ aggregator platform — a market- and hardware-agnostic system for real-time bidding of grid capacity across TSO regions and metering device vendors, supporting the transition to renewable energy critical infrastructure.
-
-- Designed the system architecture and implemented an actor-model application in Rust on tokio from scratch, comprising: a Core actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx; a Device actor for metering device communication over Modbus and protobuf; and a Wire actor for TSO grid command interfaces over HTTP/REST.
-- Architected for vendor and market agnosticism: designed an SDK abstraction layer supporting multiple hardware vendors and a pluggable market adapter pattern for different regional energy market APIs.
-- Engineered concurrency and resource safety using tokio primitives — channels, select!, cancellation tokens, and task trackers — with graceful actor supervision and fault-tolerant shutdown.
 - Built comprehensive test coverage across unit, integration, and property-based testing disciplines to ensure correctness ahead of production scale-up.
-- Currently in integration testing with a European TSO; architecture designed to scale from pilot deployments to hundreds of thousands of devices.
+
+- Currently in integration testing with a European TSO; platform architecture designed to scale from initial pilot deployments hundreds of thousands of devices, over multiple regions (and markets).
 
 ---
 ### Software Engineer · National Robotarium · Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
-Worked across a portfolio of industrial AI and robotics R&D projects for major UK clients, progressing to project lead. Delivered production ready perception, data, and control systems from client brief through to on-site deployment, spanning computer vision, real-time robotics, conversational AI, and cloud data engineering.
+Worked across a portfolio of industrial AI and robotics R&D projects for major UK industrial clients, progressing to project lead. Delivered production ready perception, data, and control systems from client brief through to on-site deployment, spanning computer vision, real-time robotics, conversational AI, and cloud data engineering.
 
-- Led a multi-disciplinary team delivering a computer-vision garment defect detection system
-  achieving 87% IoU, forecast to improve client productivity by 2% at the next TRL stage.
+- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's productivity by 2% at the next TRL stage.
 
-- Integrated a real-time robotic QA system improving labelling defect detection by 30% over
-  trained human inspectors, saving the client ~£200k/year.
-
-- Designed a novel turn-taking detection algorithm improving conversation completion rates by
-  13%; subsequently adopted by Honda Research Institute's LLM division.
-
-- Productionised perception pipeline notebooks into reliable async/real-time modules on Nvidia Jetson hardware with robotic control, PyTorch, and OpenCV.
-
-- Delivered a full-stack cloud data platform with parallel ingestion pipelines on Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a Blazor/C# ASP.NET frontend.
-
-- v2
-
-- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client productivity by 2% at the next TRL stage.
-
-- Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client ~£200k/year.
+- Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year.
 
 - Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; subsequently adopted by Honda Research Institute Japan's LLM division.
 
-- Productionised perception pipeline notebooks into reliable async/real-time modules on Nvidia Jetson hardware with robotic control, PyTorch, and OpenCV.
-
-- Delivered a full-stack cloud data platform with parallel ingestion pipelines on Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a Blazor/C# ASP.NET frontend.
-
-
+- Delivered a full-stack cloud data platform, for oil rig automated inspections, with parallel ingestion pipelines on Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a Blazor/C# ASP.NET frontend.
 
 ---
 
