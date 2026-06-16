@@ -38,8 +38,6 @@ Rust systems software engineer with 2 years of professional Rust experience desi
 ### Rust Software Engineer · Enoda Ltd · UK
 **Mar 2025 – Present**
 
-(Also mention a bit of front end)
-
 Part of the ENSEMBLE™ division building the aggregator: a market- and hardware-agnostic
 platform that bids grid capacity in real time across TSO regions and metering device vendors,
 supporting the transition to renewable energy infrastructure.
