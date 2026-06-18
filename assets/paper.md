@@ -16,18 +16,17 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 ---
 ## Skills
 
-**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, property testing
-<TODO: add testing>
+**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, software testing
 
-**Databases:** PostgreSQL, Azure SQL, NoSQL
-
-**Languages:** Rust, Haskell, OCaml, Python, Nix, Java/Scala, C/C++, Terraform
+**Languages:** Rust, Haskell, Python, Ocaml/Rocq, Java/Scala, Nix, C/C++, Terraform
 
 **Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, Protocol Buffers (protobuf), Open Telemetry, HTTP/REST, WebSockets
 
+**Databases:** PostgreSQL, Azure SQL, NoSQL
+
 **Cloud:** Azure (Synapse, Functions, Batch, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
-**Also:** Rust smart contract integration (sui and cosmos sdks); PyTorch; OpenCV
+**Also:** Type-driven development; Rust smart contract integration (sui and cosmos sdks);
 
 ---
 ## Experience
@@ -42,21 +41,23 @@ Architected and lead Rust engineer on the ENSEMBLE aggregator platform — a mar
 Influenced the technical and business aspects of the application aligning the development of a new platform with global ambitions
 
 new platform, built its own primitives
+<TODO: finish header section for cv>
 
 
 - Designed and implemented an actor-model application in Rust on tokio, comprising: a Core actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx; a Device actor for metering device communication over protobuf; and a WIRE actor for TSO grid command interfaces over HTTP/REST.
 <TODO: explain that the actor-model architecture is matching the functional requirements allowing effective tracking of current (and future changes) to specification>
 
-
 - Architected the system for vendor and market agnosticism: developed an SDK abstraction layer supporting multiple hardware vendors, and a pluggable market adapter pattern for different regional energy market APIs and different kinds of devices.
+<TODO: embedding business logic into type system to track functional requirements and their updates>
+<TODO: layered architecture that handles different responsibilities>
+<TODO: maybe merge this with bullet point above?>
 
+- Engineered robust IO-bounded concurrency and resource safety, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources.
 
 <TODO: need to finish open-telemetry>
 - installed a telemetry and observability layer, using open-telemetry, which traces every application and business logic operation and handles error handling
 alerting 
 monitoring
-
-- Engineered robust IO-bounded concurrency and resource safety, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources.
 
 - Built comprehensive test coverage across unit, integration, and property-based testing disciplines to ensure correctness ahead of production scale-up.
 
@@ -90,10 +91,21 @@ Sep 2018 – Jul 2023 · Awarded Distinction
 Proprietary Haskell application (fully Nixified) that ingests in-match football event streams and derives novel performance metrics not available in current commercial data products. Personal entrepreneurial project targeting eventual commercial launch.
 
 **P2PRC** · Open-Source Contributor
-Developed and maintained the Haskell language layer on top of the P2PRC networking library, enabling industrial adoption by external organisations <TODO: add link to Kompanion>. Managed builds, development environments, and deployments with Nix; contributed to software architecture and system integration planning.
+Developed and maintained the Haskell language layer on top of the P2PRC networking library, enabling industrial adoption by external organisations, such as <TODO: add link to Kompanion>. Managed builds, development environments, and deployments with Nix; Leading Haskell API development; Contributor to software architecture and system integration planning.
 
-**Docker Development Framework** · Internal Tooling
-Built a lightweight Bash framework that standardised Docker development and deployment workflows across multiple industrial projects, at National Robotarium, collectively worth hundreds of thousands of pounds; included Nvidia Docker runtime integration and X11 desktop application support.
+**Docker Development Framework** · Past experience's internal tooling
+Spontaneously developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple industrial projects, during job experience National Robotarium, collectively worth +500k pounds in projects' revenue; included Nvidia Docker runtime integration and X11 desktop application support, essential for robotic's development.
+
+
+**Ouros - Rust Hardware Simulator** · Rust Open-source research project
+<TODO: Spontaneous and informal collaboration with one leading research in Haskell based dataflow hardware description, from inception>
+<TODO: taking microHS haskell combinator-based program representation to be compiled into an hardware haskell runtime representation>
+<TODO: currently preparing project to be upgraded from research grade to wider production>
+<TODO: responsible for hardening static analysis of rust project>
+<TODO: responsible for setting up nix development and build environment>
+<TODO: responsible for adding rust profiling, will be optimising a (performance) naive implmentation>
+eTODO: add project with Ouros>
+
 
 ---
 ## Languages
