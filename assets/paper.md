@@ -20,15 +20,15 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 
 **Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, software testing
 
-**Languages:** Rust, Haskell, Python, Ocaml/Rocq, Java/Scala, Nix, C/C++, Terraform
+**Languages:** Rust, Haskell, Python, Ocaml/Rocq, Java/Scala, Nix, C/C++, C#/F#, Terraform
 
-**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, Protocol Buffers (protobuf), Open Telemetry, HTTP/REST, WebSockets
+**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, Protobuf, Open Telemetry, HTTP/REST, WebSockets
 
 **Databases:** PostgreSQL, Azure SQL, NoSQL
 
-**Cloud:** Azure (Synapse, Functions, Batch, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
+**Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
-**Also:** Type-driven development; Rust smart contract integration (sui and cosmos sdks);
+**Also:** Type driven development; Rust smart contract integration (sui and cosmos sdks);
 
 ---
 ## Experience
@@ -36,7 +36,7 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 ### Rust Software Engineer · Enoda Ltd · UK
 **Mar 2025 – Present**
 
-Part of the ENSEMBLE division building the aggregator: a market- and hardware-agnostic platform that bids grid capacity in real time across TSO regions and metering device vendors, supporting the transition to renewable energy infrastructure.
+Part of the ENSEMBLE division building the aggregator: a market- and hardware-agnostic platform that bids grid capacity in real time across TSO regions and metering device vendors, supporting the transition to renewable energy infrastructure (financialising energy markets)
 
 Architected and lead Rust engineer on the ENSEMBLE aggregator platform — a market- and hardware-agnostic system for real-time bidding of grid capacity across TSO regions and metering device vendors, supporting the transition to renewable energy critical infrastructure.
 
@@ -59,14 +59,11 @@ new platform, built its own primitives
 <TODO: typestate pattern to enforce algebraic-driven parsing and business-level validation>
 <TODO: maybe merge this with bullet point above?>
 
-- Engineered robust IO-bounded concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources.
+- Engineered robust IO-bounded concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources;
 
-<TODO: need to finish open-telemetry>
-- installed a telemetry and observability layer, using open-telemetry, which traces every application and business logic operation and handles error handling
-alerting
-monitoring
+- Installed a monitoring and alerting layer, leveraging open-telemetry, to trace application and business operations, and react to certain kinds of runtime errors;
 
-- Built comprehensive test coverage across unit, integration, and property-based testing disciplines to ensure correctness ahead of production scale-up.
+- Built comprehensive unit testing coverage across framework's components and functional requirements driven integration testing and aligned with the actor-model;
 
 - Currently in integration testing with an European TSO;
 
@@ -74,15 +71,15 @@ monitoring
 ### Software Engineer (Project Lead) · National Robotarium · Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
-Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer.
+Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
 
-- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's overall productivity by 2%.
+- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's overall productivity by 2%;
 
-- Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year.
+- Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year;
 
-- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; subsequently adopted by Honda Research Institute Japan's LLM division.
+- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; subsequently adopted by Honda Research Institute Japan's LLM division;
 
-- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a WebAssembly Blazor frontend.
+- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
 
 
 ---
@@ -103,13 +100,10 @@ Developed and maintained the Haskell language layer on top of the P2PRC networki
 **Docker Development Framework** · Past experience's internal tooling
 Spontaneously developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple industrial projects, during job experience National Robotarium, collectively worth +500k pounds in projects' revenue; included Nvidia Docker runtime integration and X11 desktop application support, essential for robotic's development.
 
-
 **Ouros - Rust Hardware Simulator** · Rust Open-source research project
-<TODO: Spontaneous and informal collaboration with one leading research in Haskell based dataflow hardware description, from inception>
-<TODO: taking microHS haskell combinator-based program representation to be compiled into an hardware haskell runtime representation>
-<TODO: currently preparing project to be upgraded from research grade to wider production>
+<TODO: add link to this emulator https://github.com/bathtub-01/ouros-simulator >
+Informal collaboration with a research group focused in Haskell based dataflow hardware description. This emulator takes a takes a MicroHS combinator-based AST program representation to be compiled into an hardware Haskell runtime representation. Currently being part of preparing a open-source public release by taking responsibility for upgrading cargo and nix development/build environment, as well as optimising a
 <TODO: responsible for hardening static analysis of rust project>
-<TODO: responsible for setting up initial nix development and build environment, and upgrading it>
 <TODO: responsible for adding rust profiling, will be optimising a (performance) naive implmentation>
 
 
