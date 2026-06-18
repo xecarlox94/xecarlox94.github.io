@@ -4,7 +4,6 @@
 +44 7759 669644 · jf94.uk@gmail.com · linkedin.com/in/xecarlox94 · github.com/xecarlox94
 
 ---
-
 ## Professional Summary
 
 Systems software engineer specialising in software engineering and architecture of real-time, safety-critical Rust applications for industrial and critical infrastructure. Experienced in designing actor-model concurrent systems with Rust, integrating industrial protocols, and building reliable software for environments where correctness and resilience matter. Track record of leading multi-disciplinary engineering and research teams to deliver measurable outcomes for major industrial clients. Particularly interested in critical systems, verified software, and the intersection of robust engineering with complex operational domains.
@@ -15,25 +14,22 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 
 
 ---
-
 ## Skills
 
-**Rust:** tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, async/await, property testing
+**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, property testing
+<TODO: add testing>
 
-**Databases:** PostgreSQL (sqlx), Azure SQL, NoSQL
+**Databases:** PostgreSQL, Azure SQL, NoSQL
 
-**Languages:** Rust, Haskell, OCaml, C/C++, Nix, Java/Scala, Python, Terraform
+**Languages:** Rust, Haskell, OCaml, Python, Nix, Java/Scala, C/C++, Terraform
 
 **Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, Protocol Buffers (protobuf), Open Telemetry, HTTP/REST, WebSockets
-
 
 **Cloud:** Azure (Synapse, Functions, Batch, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
 **Also:** Rust smart contract integration (sui and cosmos sdks); PyTorch; OpenCV
 
-
 ---
-
 ## Experience
 
 ### Rust Software Engineer · Enoda Ltd · UK
@@ -51,43 +47,43 @@ new platform, built its own primitives
 - Designed and implemented an actor-model application in Rust on tokio, comprising: a Core actor for bid aggregation and financial calculations with PostgreSQL persistence via sqlx; a Device actor for metering device communication over protobuf; and a WIRE actor for TSO grid command interfaces over HTTP/REST.
 <TODO: explain that the actor-model architecture is matching the functional requirements allowing effective tracking of current (and future changes) to specification>
 
+
 - Architected the system for vendor and market agnosticism: developed an SDK abstraction layer supporting multiple hardware vendors, and a pluggable market adapter pattern for different regional energy market APIs and different kinds of devices.
+
 
 <TODO: need to finish open-telemetry>
 - installed a telemetry and observability layer, using open-telemetry, which traces every application and business logic operation and handles error handling
 alerting 
 monitoring
 
-
-- Engineered robust IO-bounded concurrency and resource safety, leveraging tokio primitives, with graceful supervision of resources and fault-tolerant shutdown of running instances.
+- Engineered robust IO-bounded concurrency and resource safety, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources.
 
 - Built comprehensive test coverage across unit, integration, and property-based testing disciplines to ensure correctness ahead of production scale-up.
 
 - Currently in integration testing with an European TSO;
 
 ---
-### Software Engineer · National Robotarium · Edinburgh, UK
+### Software Engineer (Project Lead) · National Robotarium · Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
-Worked across a portfolio of industrial AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer. Delivered production ready perception, data, and control systems from client on-site visit through to on-site deployment, spanning computer vision, real-time robotics, conversational AI, and cloud data engineering.
+Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer.
 
-- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's productivity by 2% at the next TRL stage.
+- Led a multi-disciplinary team delivering a computer-vision garment defect detection system achieving 87% IoU, forecast to improve client's overall productivity by 2%.
 
 - Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year.
 
 - Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; subsequently adopted by Honda Research Institute Japan's LLM division.
 
-- Delivered a full-stack cloud data platform, for oil rig automated inspections, with parallel ingestion pipelines on Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a Blazor/C# ASP.NET frontend.
+- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Data Lake and Batch Service, Terraform-automated infrastructure, and a WebAssembly Blazor frontend.
+
 
 ---
-
 ## Education
 
 **MEng Software Engineering · Heriot-Watt University, Edinburgh**
 Sep 2018 – Jul 2023 · Awarded Distinction
 
 ---
-
 ## Projects & Open Source
 
 **Football Analytics Engine** · (in development)
@@ -100,7 +96,6 @@ Developed and maintained the Haskell language layer on top of the P2PRC networki
 Built a lightweight Bash framework that standardised Docker development and deployment workflows across multiple industrial projects, at National Robotarium, collectively worth hundreds of thousands of pounds; included Nvidia Docker runtime integration and X11 desktop application support.
 
 ---
-
 ## Languages
 
 **English** – Full professional proficiency · **Portuguese** – Native · **Spanish** – Professional proficiency
