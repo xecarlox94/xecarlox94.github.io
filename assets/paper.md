@@ -1,7 +1,10 @@
 # Jose Fernandes
 **Rust Systems Software Engineer**
 
-+44 7759 669644 · jf94.uk@gmail.com · linkedin.com/in/xecarlox94 · github.com/xecarlox94
++44 7759 669644 
+jf94.uk@gmail.com 
+linkedin.com/in/xecarlox94 
+github.com/xecarlox94
 
 ---
 ## Professional Summary
@@ -13,7 +16,7 @@ Systems software engineer specialising in software engineering and architecture 
 Rust systems software engineer with 1-2 years of professional Rust experience designing and building concurrent, safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (Protobuf, HTTP/REST) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering and research teams to deliver measurable production outcomes. Additional experience in computer vision, real-time robotics, and cloud data engineering.
 
 <TODO: Business-driven yet curious for cutting edge programming language and software verification research to offer competitive advantage to employer/client>
-<TODO: finish this section>
+<TODO: finish this section; decide with alternative to use>
 
 ---
 ## Skills
@@ -33,8 +36,9 @@ Rust systems software engineer with 1-2 years of professional Rust experience de
 ---
 ## Experience
 
-### Rust Software Engineer · Enoda Ltd · UK
+### Rust Software Engineer - Enoda Ltd - UK
 **Mar 2025 – Present**
+
 
 Part of the ENSEMBLE division building the aggregator: a market- and hardware-agnostic platform that bids grid capacity in real time across TSO regions and metering device vendors, supporting the transition to renewable energy infrastructure (financialising energy markets)
 
@@ -61,14 +65,14 @@ new platform, built its own primitives
 
 - Engineered robust IO-bounded concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources;
 
-- Installed a monitoring and alerting layer, leveraging open-telemetry, to trace application and business operations, and react to certain kinds of runtime errors;
+- Installed a monitoring and alerting layer, leveraging open-telemetry, to trace application and business operations, and handle to certain kinds of runtime errors;
 
-- Built comprehensive unit testing coverage across framework's components and functional requirements driven integration testing and aligned with the actor-model;
+- Setup comprehensive unit testing coverage across framework's components and functional requirements driven integration testing and aligned with the actor-model;
 
 - Currently in integration testing with an European TSO;
 
 ---
-### Software Engineer (Project Lead) · National Robotarium · Edinburgh, UK
+### Software Engineer - National Robotarium - Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
@@ -85,29 +89,26 @@ Worked across a portfolio of industrial production-driven AI and Robotics R&D pr
 ---
 ## Education
 
-**MEng Software Engineering · Heriot-Watt University, Edinburgh**
-Sep 2018 – Jul 2023 · Awarded Distinction
+**MEng Software Engineering - Heriot-Watt University, Edinburgh**
+Sep 2018 – Jul 2023: Awarded Distinction
 
 ---
 ## Projects & Open Source
 
-**Football Analytics Engine** · (in development)
+**Football Analytics Engine** - (in development)
 Proprietary Haskell application (fully Nixified) that ingests in-match football event streams and derives novel performance metrics not available in current commercial data products. Personal entrepreneurial project targeting eventual commercial launch.
 
-**P2PRC** · Open-Source Contributor
+**P2PRC** - Open-Source Contributor
 Developed and maintained the Haskell language layer on top of the P2PRC networking library, enabling industrial adoption by external organisations, such as <TODO: add link to Kompanion>. Managed builds, development environments, and deployments with Nix; Leading Haskell API development; Contributor to software architecture and system integration planning.
 
-**Docker Development Framework** · Past experience's internal tooling
+**Docker Development Framework** - Past experience's internal tooling
 Spontaneously developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple industrial projects, during job experience National Robotarium, collectively worth +500k pounds in projects' revenue; included Nvidia Docker runtime integration and X11 desktop application support, essential for robotic's development.
-
-**Ouros - Rust Hardware Simulator** · Rust Open-source research project
-<TODO: add link to this emulator https://github.com/bathtub-01/ouros-simulator >
-Informal collaboration with a research group focused in Haskell based dataflow hardware description. This emulator takes a takes a MicroHS combinator-based AST program representation to be compiled into an hardware Haskell runtime representation. Currently being part of preparing a open-source public release by taking responsibility for upgrading cargo and nix development/build environment, as well as optimising a
-<TODO: responsible for hardening static analysis of rust project>
-<TODO: responsible for adding rust profiling, will be optimising a (performance) naive implmentation>
 
 
 ---
 ## Languages
 
-**English** – Full professional proficiency · **Portuguese** – Native · **Spanish** – Professional proficiency
+**English** – Full professional proficiency 
+**Portuguese** – Native 
+**Spanish** – Professional proficiency
+
