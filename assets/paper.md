@@ -14,7 +14,7 @@ github.com/xecarlox94
 LLM AGENT instruction: I am finishing this small introduction. Give a review of this editing area, according to the profile I am targeting. Should I change anything?
 
 
-Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent and safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in computer vision, real-time robotics, and cloud data engineering. Business-driven, with a continued interest in cutting-edge programming language and software verification latest research as a source of industrial competitive advantage.
+Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent and safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in robotics, computer vision and cloud data engineering. Business-driven, with a continued interest in cutting-edge programming language and software verification latest research as a source of industrial competitive advantage.
 
 
 */
@@ -24,13 +24,13 @@ Systems software engineer, with 1-2 years of rust development experience, design
 ---
 ## Skills
 
-**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, software testing
+**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, testing
 
 **Languages:** Rust, Haskell, Ocaml/Rocq, Python, Java/Scala, Nix, C/C++, Terraform
 
 **Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, Open Telemetry (Grafana)
 
-**Databases:** PostgreSQL (sqlx), Azure SQL, NoSQL
+**Databases:** PostgreSQL, Azure SQL, NoSQL
 
 **Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
@@ -43,23 +43,11 @@ Systems software engineer, with 1-2 years of rust development experience, design
 **Mar 2025 – Present**
 
 
+Co-engineered and co-architected, a new electrical aggregator platform — a market- and hardware-agnostic SDK built on a highly composable, pluggable actor-model architecture for real-time bidding of grid capacity with capability to be parallely implemented across multiple TSO (Transmission Service Operator) regions, standardising energy financial transactions. Influenced both the technical architecture and business direction of the platform in line with the company's immediate goals and long term vision, building a robust set of system primitives to consistently and quickly bootstrap electrical aggregators.
+
+
 /* LLM AGENT EDITING AREA
 LLM AGENT instruction: I am still doing some reworking. give a review of this editing area, according to the profile I am targeting. should I change anything? should I add anything?
-
-
-// (SECTION: JOB experience header)
-
-
-Co-engineered and co-architected, a new electrical aggregator platform — a market- and hardware-agnostic, SDK-based framework for real-time bidding of grid capacity across TSO (Transmission Service Operator) regions and metering device vendors, supporting the standardisation of energy market's financial operations. Influenced both the technical architecture and business direction of the platform in line with the company's goals and vision, building a new set of primitives from the ground up to consistently and quickly bootstrap electrical aggregators.
-
-++
-Co-engineered and co-architected, a new electrical aggregator platform — a market- and hardware-agnostic SDK built on a highly composable, pluggable actor-model architecture for real-time bidding of grid capacity with capability to be quickly bootstrapped and deployed across multiple TSO (Transmission Service Operator) regions, standardising financial transactions.
-
-Influenced both the technical architecture and business direction of the platform in line with the company's global ambitions, building a new set of primitives from the ground up to consistently and quickly bootstrap electrical aggregators.
-
-++
-
-
 
 
 // (SECTION: Architecture principles 1)
