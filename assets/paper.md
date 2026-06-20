@@ -11,10 +11,10 @@ github.com/xecarlox94
 
 
 /* LLM AGENT EDITING AREA
-LLM AGENT instruction: I am finishing this small introduction. Give a review of this editing area, according to the profile I am targeting. Should I change anything?
+LLM AGENT instruction: I finished this small introduction. Give a review of this editing area, according to the profile I am targeting. Should I change anything?
 
 
-Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent and safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in robotics, computer vision and cloud data engineering. Business-driven, with a continued interest in cutting-edge programming language and software verification latest research as a source of industrial competitive advantage.
+Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent and safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in robotics, computer vision and cloud data engineering. Business-driven, with a continued interest in the latest research cutting-edge programming language and software verification as a source of industrial competitive advantage.
 
 
 */
@@ -43,38 +43,16 @@ Systems software engineer, with 1-2 years of rust development experience, design
 **Mar 2025 – Present**
 
 
-Co-engineered and co-architected, a new electrical aggregator platform — a market- and hardware-agnostic SDK built on a highly composable, pluggable actor-model architecture for real-time bidding of grid capacity with capability to be parallely implemented across multiple TSO (Transmission Service Operator) regions, standardising energy financial transactions. Influenced both the technical architecture and business direction of the platform in line with the company's immediate goals and long term vision, building a robust set of system primitives to consistently and quickly bootstrap electrical aggregators.
+Co-engineered and -architected, a new energy aggregator platform — a market- and hardware-agnostic SDK built on a highly composable, pluggable actor-model architecture for real-time bidding of grid capacity with capability to be parallely implemented across multiple TSO (Transmission Service Operator) regions, standardising energy financial transactions. Influenced both the technical architecture and business direction of the platform in line with the company's immediate goals and long term vision, building a robust set of system primitives to consistently and quickly bootstrap electrical aggregators.
 
 
 /* LLM AGENT EDITING AREA
 LLM AGENT instruction: I am still doing some reworking. give a review of this editing area, according to the profile I am targeting. should I change anything? should I add anything?
 
 
-// (SECTION: Architecture principles 1)
+- Designed and implemented an actor-model application in Rust on tokio and PostgreSQL (sqlx), using functorial/monadic layering to strictly segment responsibilities across framework layers; chose the actor-model to unify implementation, business/functional requirements and technical spec documentation, enabling effective tracking of current and future requirements changes.
 
-// Comment: deliberate usage of actor architecture TO UNIFY business functional requirements (and their updates)
-// actor model was also chosen to allow high modularity and composability (needed to support be generic across markets and devices); NEED TO SELL THIS MORE!!
-
-- Designed and implemented an actor-model application in Rust on tokio and PostgreSQL (sqlx), using functorial/monadic layering to strictly segment responsibilities across framework layers; the actor-model structure was chosen to mirror business functional requirements directly, enabling effective tracking of current and future specification changes.
-
-++
-- Designed and implemented an actor-model application in Rust on tokio and PostgreSQL (sqlx), using functorial/monadic layering to strictly segment responsibilities across framework layers; the actor-model structure was chosen to unify business functional requirements directly with implementation and technical spec documentation, enabling effective tracking of current and future specification changes.
-++
-
-
-// (SECTION: Architecture principles 2)
-
-- Embedded business logic into the type system to statically track functional requirements and their updates, applying the typestate pattern to enforce algebraic-driven parsing and business-level validation.
-
-// COMMENT: maybe add code and technical documentation? maybe add it to integration testing section
-
-++
 - Leveraged the actor model's modularity and composability to support genericity across markets and hardware vendors, allowing new aggregator deployments to be assembled from existing, pluggable components rather than rebuilt from scratch.
-++
-
-++
-- Embedded business logic into the type system to statically track functional requirements and their updates, applying the typestate pattern to enforce algebraic-driven parsing and business-level validation at compile time.
-++
 
 */
 
