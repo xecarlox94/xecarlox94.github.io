@@ -11,17 +11,10 @@ github.com/xecarlox94
 
 
 /* LLM AGENT EDITING AREA
-LLM AGENT instruction: I am still doing some reworking.
-
-// COMMENT: current version
-Rust systems software engineer with 3-4 years of software engineering professional experience designing and building concurrent, safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (Protobuf, HTTP/REST) for critical infrastructure and energy systems. Proven track record co-leading multi-disciplinary engineering and research teams to deliver measurable production outcomes in a wide range of complex domains. Business-driven, with a continued interest in cutting-edge programming language theory and software verification research as a source of industrial competitive advantage.
+LLM AGENT instruction: I am finishing this small introdution. give a review of this editing area, according to the profile I am targetting. should I change anything?
 
 
-Experienced in designing actor-model concurrent systems with Rust, integrating industrial protocols, and building reliable software for environments where correctness and resilience matter. 
-
-Track record of leading multi-disciplinary engineering and research teams to deliver measurable outcomes for major industrial clients. 
-
-Particularly interested in critical systems, verified software, and the intersection of robust engineering with complex operational domains.
+Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent, safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering (and research) teams to deliver measurable production outcomes. Additional experience in computer vision, real-time robotics, and cloud data engineering. Business-driven, with a continued interest in cutting-edge programming language and software verification latest research as a source of industrial competitive advantage.
 
 
 */
@@ -33,7 +26,7 @@ Particularly interested in critical systems, verified software, and the intersec
 
 **Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, actor model, software testing
 
-**Languages:** Rust, Haskell, Python, Ocaml/Rocq, Java/Scala, Nix, C/C++, C#/F#, Terraform
+**Languages:** Rust, Haskell, Ocaml/Rocq, Python, Java/Scala, C/C++, Nix, Terraform
 
 **Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, Open Telemetry (Grafana)
 
@@ -41,7 +34,7 @@ Particularly interested in critical systems, verified software, and the intersec
 
 **Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
-**Also:** Type-driven development; Rust smart contract integration (sui and cosmos sdks);
+**Also:** Type-driven development; Rust smart-contract integration (sui and cosmos sdks);
 
 ---
 ## Experience
@@ -50,11 +43,15 @@ Particularly interested in critical systems, verified software, and the intersec
 **Mar 2025 – Present**
 
 
-
 /* LLM AGENT EDITING AREA
-LLM AGENT instruction: I am still doing some reworking.
+LLM AGENT instruction: I am still doing some reworking. give a review of this editing area, according to the profile I am targetting. should I change anything? should I add anything?
+
 
 // (SECTION: JOB experience header) 
+
+
+// COMMENT: I want to emphasise this a bit more  in the prelude to
+Highly composable architecture of pluggable actor 
 
 - Architected the system for vendor and market agnosticism: developed an SDK supporting multiple hardware vendors, and a pluggable market adapter pattern for different regional energy market APIs.
 
@@ -72,10 +69,10 @@ Co-engineered and co-architected, a new electrical aggregator platform — a mar
 
 - Embedded business logic into the type system to statically track functional requirements and their updates, applying the typestate pattern to enforce algebraic-driven parsing and business-level validation.
 
-
 // COMMENT: maybe add code and technical documentation? maybe add it to integration testing section
 
 */
+
 
 - Engineered robust IO-bounded concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources;
 
