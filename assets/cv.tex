@@ -1,0 +1,167 @@
+﻿\documentclass[11pt]{article}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage{nopageno}
+\usepackage{enumitem}
+\usepackage{multicol}
+\usepackage{xcolor}
+
+\usepackage[
+  vmargin=2em,
+  hmargin=3.1em
+]{geometry}
+
+\usepackage[
+  colorlinks=true,
+  urlcolor=blue,
+]{hyperref}
+
+\definecolor{titleGreen}{RGB}{0,110,0}
+\definecolor{headerGreen}{RGB}{0,85,0}
+
+
+\newcommand{\MyName}{\color{headerGreen}Jose Fernandes}
+\newcommand{\MyRole}{Software Engineer}
+\newcommand{\MyPostCode}{KY11 8QJ}
+\newcommand{\MyNumber}{\LinkPhone{+447759669644}}
+\newcommand{\MyEmail}{\LinkEmail{jf94.uk@gmail.com}}
+\newcommand{\MyLinkedIn}{\LinkWeb{linkedin.com/in/xecarlox94/}{LinkedIn}}
+\newcommand{\MyGithub}{\LinkWeb{github.com/xecarlox94}{Github}}
+
+
+\newcommand{\LinkPhone}[1]{\href{tel:#1}{\underline{#1}}}
+\newcommand{\LinkEmail}[1]{\href{mailto:#1}{\underline{#1}}}
+\newcommand{\LinkWeb}[2]{\href{https://www.#1}{\underline{#2}}}
+\newcommand{\LinkWebClean}[2]{\href{https://#1}{\underline{#2}}}
+
+\newcommand{\UList}[1]{
+\begin{itemize}[leftmargin=*]
+  #1
+\end{itemize}
+}
+
+\newcommand{\Title}{
+
+  \begin{center}
+
+    {\Huge\bfseries\MyName}
+
+    \vspace{0.9em}
+
+    {\Large\MyRole}
+
+    \vspace{0.8em}
+
+    \MyNumber \quad \quad
+    \MyEmail \quad \quad
+    \MyGithub \quad \quad
+    \MyLinkedIn
+
+  \end{center}
+}
+
+
+\newcommand{\Project}[3]{ \subsection{#1 #2} #3  }
+\newcommand{\ProjectWithLink}[3]{ \Project{#1}{ \LinkWeb{#2}{link} }{#3} }
+
+
+
+\newcommand{\sectionTitle}[1]{\section{\color{titleGreen}#1}}
+
+\titleformat{\section}
+{\huge\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titlespacing{\section}
+{0em}{0.7em}{1.3em}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}
+
+\titlespacing{\subsection}
+{-0.9em}{1.3em}{0.5em}
+
+\begin{document}
+
+\Title
+
+\sectionTitle{Professional Summary}
+
+summary
+
+\sectionTitle{Technical Skills}
+
+\UList{
+  \item \textbf{Languages}: 
+  \item \textbf{Systems Engineering}: 
+}
+
+
+
+\sectionTitle{Experience}
+
+\subsection{(052025 -) Rust Software Engineer \hfill \makebox[0pt][c]{Enoda Ltd}  \hfill Edinburgh, UK}
+\UList{
+
+  \item \textbf{Project Lead Engineer} - Automated Clothing Visual Inspection - \textbf{ACS Clothing} (2024-2025)
+  \UList{
+    \item item
+  }
+}
+
+\subsection{(112022 - 052025) Software Engineer \hfill \makebox[0pt][c]{National Robotarium}  \hfill Edinburgh, UK}
+\UList{
+
+  \item \textbf{Project Lead Engineer} - Automated Clothing Visual Inspection - \textbf{ACS Clothing} (2024-2025)
+  \UList{
+    \item item
+  }
+}
+
+\sectionTitle{Education}
+
+\subsection{Masters - MEng Software Engineering, Heriot-Watt University (2018 - 2023)}
+
+\noindent Awarded \textbf{Distinction}.
+
+
+\sectionTitle{Relevant Projects}
+
+\Project{<TODO: add own project>}
+{
+  \UList{
+    \item item
+  }
+}
+
+\Project{Open-Source Contributor - P2PRC}
+{
+  \UList{
+    \item item
+  }
+}
+
+\Project{Bash Framework - Tooling}
+{
+  \UList{
+    \item item
+  }
+}
+
+\sectionTitle{Languages}
+\UList{
+  \item \textbf{English}: full professional proficiency;
+  \item \textbf{Portuguese}: native;
+  \item \textbf{Spanish}: professional proficiency;
+}
+
+
+\end{document}

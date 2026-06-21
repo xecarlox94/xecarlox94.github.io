@@ -28,11 +28,11 @@ Rust systems software engineer, with 3-4 years of overall experience, currently 
 ---
 ## Experience
 
-### Rust Software Engineer at Enoda Ltd - Edinburgh, UK
+### Rust Software Engineer at Enoda Ltd (UK) - Edinburgh, UK
 **Mar 2025 – Present**
 
 
-Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK. Built on a composable, pluggable actor-model architecture for real-time energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
+Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK, built on a composable, pluggable actor-model architecture for real-time energy bidding. The platform is designed to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
 - Proposed, and then co-designed an actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
@@ -53,7 +53,7 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
 
-- Developed a turn-taking detection algorithm for a automotive conversational application which improved conversation completion rates by 13%, reported by a car manufacturer's internal experiments;
+- Developed a turn-taking detection algorithm for an automotive conversational application which improved conversation completion rates by 13%, reported by a car manufacturer's internal experiments;
 
 - Integrated a real-time robotic bottle defect QA system improving issue detection by an estimate of 30% over trained human inspectors and saving ~£200k/year, according to the client's reports;
 
