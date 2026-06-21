@@ -55,9 +55,9 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
 
-- Developed a turn-taking detection algorithm which, according to experiment results, improved conversation completion rates by 13%; later adopted by LLM division of a car manufacturer's client;
+- Developed a turn-taking detection algorithm which improved conversation completion rates by 13%, reported by a major car manufacturer's client own experiments;
 
-- Integrated a real-time robotic QA system improving labelling defect detection by an internal estimate of 30% over trained human inspectors, saving the client's ~£200k/year;
+- Integrated a real-time robotic bottle defect QA system improving issue detection by an estimate of 30% over trained human inspectors and saving around ~£200k/year, according to client's reports;
 
 - Contributed to development of cloud data platform, for uk oil rig automated inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
 
