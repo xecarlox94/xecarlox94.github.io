@@ -15,17 +15,17 @@ Rust systems software engineer, with 3-4 years of overall software engineering e
 ---
 ## Skills
 
-**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, testing
+**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, testing;
 
-**Languages:** Rust, Haskell, Ocaml/Rocq, Python, Java/Scala, Nix, C/C++, Terraform
+**Languages:** Rust, Haskell, Ocaml/Rocq, Python, Java/Scala, Nix, C/C++, Terraform;
 
-**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, Open Telemetry (Grafana)
+**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, Open Telemetry (Grafana);
 
-**Databases:** PostgreSQL, Azure SQL, NoSQL
+**Databases:** PostgreSQL, Azure SQL, NoSQL;
 
-**Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
+**Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery);
 
-**Also:** Rust smart-contract integration (sui and cosmos sdks);
+**Also:** Rust smart-contract integration (sui and cosmos sdks).
 
 ---
 ## Experience
@@ -34,7 +34,7 @@ Rust systems software engineer, with 3-4 years of overall software engineering e
 **Mar 2025 – Present**
 
 
-Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for low-latency energy bidding with capability to be parallely bootstrapped and deployed across multiple TSO (Transmission Service Operator) across different regions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
+Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for low-latency energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
 - Proposed the actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
@@ -45,7 +45,7 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 - Setup comprehensive unit testing coverage across framework's primitives as well as integration testing (and technical documentation) tightly aligned with functional requirements;
 
-- Installed a monitoring and alerting layer, leveraging OpenTelemetry and Grafana, to trace application and business operations, and handle to certain kinds of runtime errors;
+- Installed a monitoring and alerting layer, leveraging OpenTelemetry and Grafana, to trace application and business operations, and handle certain kinds of runtime errors;
 
 - Reached integration testing stage with an EU-based energy market, the team's key delivery milestone for the year.
 
@@ -60,9 +60,9 @@ Worked across a portfolio of industrial production-driven AI and Robotics R&D pr
 
 - Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year;
 
-- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; later adopted by car manufactorer's client LLM division;
+- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; later adopted by car manufacturer's client LLM division;
 
-- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
+- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend.
 
 
 ---
