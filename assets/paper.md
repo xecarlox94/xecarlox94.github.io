@@ -9,17 +9,17 @@ github.com/xecarlox94
 ---
 ## Professional Summary
 
-Rust systems software engineer, with 3-4 years of overall experience, currently focused on concurrent, fault-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP/REST, Protobuf). Previously contributed (and led) multi-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type-driven development and software verification methods as enablers of safety and reliability in production systems.
+Rust systems software engineer, with 3-4 years of overall experience, currently focused on concurrent, fault-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP/REST, Protobuf). Previously progressed into an engineering-lead role across multi-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type-driven development and formal verification methods as enablers of safety and reliability in production systems.
 
 
 ---
 ## Skills
 
-**Rust:** async/await, tokio (channels, select, cancellation tokens, task trackers), sqlx, testing;
+**Rust:** async/await, tokio (channels, select, cancellation tokens, task trackers), sqlx, testing, smart-contract integration (Sui, Cosmos SDKs);
 
-**Languages:** Rust, Haskell, Ocaml, Python, Java/Scala, Nix, C/C++, Terraform;
+**Languages:** Rust, Haskell, Ocaml, Python, Java/Scala, C/C++, Terraform;
 
-**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, gRPC, Open Telemetry (Grafana);
+**Systems:** Linux, Nix, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, gRPC, OpenTelemetry (Grafana);
 
 **Databases:** PostgreSQL, Azure SQL, NoSQL;
 
@@ -36,15 +36,15 @@ Rust systems software engineer, with 3-4 years of overall experience, currently 
 
 Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for real-time energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
-- Proposed, and then co-designed a actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
+- Proposed, and then co-designed an actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
-- Co-designed and implemented core framework components in Rust on tokio and PostgreSQL (sqlx), clean separation of concerns across framework layers;
+- Co-designed and implemented core framework components in Rust on tokio and PostgreSQL (sqlx), using a clean separation of concerns across framework layers;
 
 - Engineered robust I/O-bound concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources;
 
 - Set up comprehensive unit testing coverage across framework's primitives as well as integration testing (and technical documentation) tightly aligned with functional requirements;
 
-- Installed a monitoring and alerting layer, leveraging Open Telemetry and Grafana, to trace application and business operations, and handle certain kinds of runtime errors;
+- Installed a monitoring and alerting layer, leveraging OpenTelemetry and Grafana, to trace application and business operations, and handle certain kinds of runtime errors;
 
 - Reached integration testing stage with an EU-based energy market, the team's key delivery milestone for the year.
 
@@ -57,11 +57,11 @@ Worked across a portfolio of industrial production-driven AI and Robotics R&D pr
 
 - Developed a turn-taking detection algorithm which, according to experiment results, improved conversation completion rates by 13%; later adopted by LLM division of a car manufacturer's client;
 
-- Integrated a real-time robotic QA system improving labelling defect detection by, internal estimate of, 30% over trained human inspectors, saving the client's ~£200k/year;
+- Integrated a real-time robotic QA system improving labelling defect detection by an internal estimate of 30% over trained human inspectors, saving the client's ~£200k/year;
 
-- Led development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
+- Contributed to development of cloud data platform, for uk oil rig automated inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
 
-- Led a team to deliver a computer-vision garment defect detection system achieving 87% IoU, client forecasted overall productivity improvement by 2%.
+- Led a team to deliver a computer-vision garment defect detection system achieving 87% IoU, with the client forecasting overall productivity improvement by 2%.
 
 
 
@@ -80,10 +80,10 @@ Proprietary Haskell application (nixified infrastructure) that ingests in-match 
 
 
 **P2PRC** - Open-Source Contributor
-Contributor to software architecture and system integration planning. Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. 
+Contributed to software architecture and system integration planning. Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. 
 
 **Docker Development & Deployment environment** - Internal tooling
-Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, during job experience National Robotarium; included Nvidia runtime and X11 desktop application support.
+Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, while at National Robotarium; included Nvidia runtime and X11 desktop application support.
 
 
 ---
