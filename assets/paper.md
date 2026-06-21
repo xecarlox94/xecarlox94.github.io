@@ -9,23 +9,21 @@ github.com/xecarlox94
 ---
 ## Professional Summary
 
-Rust systems software engineer, with 3-4 years of overall software engineering experience, specialising in concurrent, fault-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP/REST, Protobuf). Previously led multi-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type-driven development and formal verification methods as enablers of safety and reliability in production systems.
+Rust systems software engineer, with 3-4 years of overall experience, specialising in concurrent, fault-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP/REST, Protobuf). Previously led multi-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type-driven development and software verification methods as enablers of safety and reliability in production systems.
 
 
 ---
 ## Skills
 
-**Rust:** async/await, tokio (channels, select!, cancellation tokens, task trackers), sqlx, testing;
+**Rust:** async/await, tokio (channels, select, cancellation tokens, task trackers), sqlx, testing;
 
-**Languages:** Rust, Haskell, Ocaml/Rocq, Python, Java/Scala, Nix, C/C++, Terraform;
+**Languages:** Rust, Haskell, Ocaml, Python, Java/Scala, Nix, C/C++, Terraform;
 
-**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, Open Telemetry (Grafana);
+**Systems:** Linux, NixOS, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, gRPC, Open Telemetry (Grafana);
 
 **Databases:** PostgreSQL, Azure SQL, NoSQL;
 
 **Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery);
-
-**Also:** Rust smart-contract integration (sui and cosmos sdks).
 
 ---
 ## Experience
@@ -56,13 +54,14 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
 
-- Led a team to deliver a computer-vision garment defect detection system achieving 87% IoU, forecasted to improve client's overall productivity by 2%;
-
 - Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year;
 
-- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; later adopted by car manufacturer's client LLM division;
+- Developed a turn-taking detection algorithm improving conversation completion rates by 13%; later adopted by car manufacturer's client LLM division;
 
-- Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend.
+- Contributed to development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
+
+- Led a team to deliver a computer-vision garment defect detection system achieving 87% IoU, forecasted to improve client's overall productivity by 2%.
+
 
 
 ---
@@ -80,8 +79,8 @@ Proprietary Haskell application (nixified infrastructure) that ingests in-match 
 **P2PRC** - Open-Source Contributor
 Developed and maintained the Haskell language layer on top of the P2PRC networking library, enabling industrial adoption by external organisations. Managed builds, development environments, and deployments with Nix; Leading Haskell API development; Contributor to software architecture and system integration planning.
 
-**Docker Development & Deployment environment** - Past experience's internal tooling
-Spontaneously developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects (worth +500k pounds in revenue), during job experience National Robotarium; included Nvidia Docker runtime integration and X11 desktop application support, essential for robotic's development.
+**Docker Development & Deployment environment** - Internal tooling
+Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects (worth +500k pounds in revenue), during job experience t National Robotarium; included Nvidia Docker runtime integration and X11 desktop application support, essential for robotic's development.
 
 
 ---
