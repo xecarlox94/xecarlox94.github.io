@@ -17,22 +17,22 @@ Rust systems software engineer, with 3-4 years of overall experience, currently 
 
 **Rust:** async/await, tokio (channels, select, cancellation tokens, task trackers), sqlx, testing, smart-contract integration (Sui, Cosmos SDKs);
 
-**Languages:** Rust, Haskell, Ocaml, Python, Java/Scala, C/C++
+**Languages:** Rust, Haskell, Ocaml, Python, Java, C/C++;
 
-**Systems:** Linux, Nix, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, gRPC, OpenTelemetry (Grafana);
+**Systems:** Linux, Nix, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP/REST, WebSockets, Protobuf, gRPC, OpenTelemetry, Grafana;
 
 **Databases:** PostgreSQL, Azure SQL, NoSQL;
 
-**Cloud:** Azure (Synapse, Functions, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery), Terraform;
+**Cloud:** Azure (Synapse, Functions, Event Hub), AWS (S3, EC2), Terraform;
 
 ---
 ## Experience
 
-### Rust Software Engineer - Enoda Ltd - UK
+### Rust Software Engineer at Enoda Ltd - Edinburgh, UK
 **Mar 2025 – Present**
 
 
-Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for real-time energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
+Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK. Built on a composable, pluggable actor-model architecture for real-time energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
 - Proposed, and then co-designed an actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
@@ -48,30 +48,30 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 
 ---
-### Software Engineer - National Robotarium - Edinburgh, UK
+### Software Engineer at National Robotarium - Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
 
-- Developed a turn-taking detection algorithm which improved conversation completion rates by 13%, reported by a car manufacturer's internal experiments;
+- Developed a turn-taking detection algorithm for a automotive conversational application which improved conversation completion rates by 13%, reported by a car manufacturer's internal experiments;
 
-- Integrated a real-time robotic bottle defect QA system improving issue detection by an estimate of 30% over trained human inspectors and saving estimated ~£200k/year, according to client's reports;
+- Integrated a real-time robotic bottle defect QA system improving issue detection by an estimate of 30% over trained human inspectors and saving ~£200k/year, according to the client's reports;
 
 - Contributed to development of cloud data platform, for oil rig automated inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
 
-- Led a team to deliver a computer-vision garment defect detection system achieving 87% IoU, with the client forecasting overall productivity improvement by 2%.
+- Led a team to deliver a computer-vision garment defect detection system (using AWS) achieving 87% IoU, with the client forecasting overall productivity improvement by 2%.
 
 
 
 ---
 ## Education
 
-**MEng Software Engineering - Heriot-Watt University, Edinburgh**
+**MEng Software Engineering at Heriot-Watt University - Edinburgh, UK**
 Sep 2018 – Jul 2023
 Awarded Distinction
 
 ---
-## Projects & Open Source
+## Open Source & Projects
 
 **Football Analytics Engine** - Proprietary project (in development)
 Proprietary Haskell application (nixified infrastructure) that ingests in-match football event streams and derives performance metrics distinct from standard commercial offerings. Personal entrepreneurial project targeting eventual commercial launch.
