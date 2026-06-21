@@ -36,7 +36,7 @@ Rust systems software engineer, with 3-4 years of overall experience, currently 
 
 Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for real-time energy bidding with capability to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
-- Proposed the actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
+- Proposed, and then co-designed a actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
 - Co-designed and implemented core framework components in Rust on tokio and PostgreSQL (sqlx), clean separation of concerns across framework layers;
 
@@ -80,7 +80,7 @@ Proprietary Haskell application (nixified infrastructure) that ingests in-match 
 
 
 **P2PRC** - Open-Source Contributor
-Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. Contributor to software architecture and system integration planning.
+Contributor to software architecture and system integration planning. Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. 
 
 **Docker Development & Deployment environment** - Internal tooling
 Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, during job experience National Robotarium; included Nvidia runtime and X11 desktop application support.
