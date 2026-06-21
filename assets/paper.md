@@ -9,16 +9,7 @@ github.com/xecarlox94
 ---
 ## Professional Summary
 
-
-/* LLM AGENT EDITING AREA
-LLM AGENT instruction: I finished this small introduction. Give a review of this editing area, according to the profile I am targeting. Should I change anything?
-
-
-Systems software engineer, with 1-2 years of rust development experience, designing and building concurrent and safety-critical distributed systems. Specialist in actor-model architecture, async/await concurrency, and industrial communication protocols (HTTP/REST, Protobuf) for critical infrastructure and energy systems. Proven track record leading multi-disciplinary engineering teams to deliver measurable production outcomes. Additional experience in robotics, computer vision and cloud data engineering. Business-driven, with a continued interest in the latest research cutting-edge programming language and software verification as a source of industrial competitive advantage.
-
-
-*/
-
+Rust systems software engineer, with 3-4 years of overall software engineering experience, specialising in concurrent, fault-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP/REST, Protobuf). Previously led multi-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type-driven development and formal verification methods as enablers of safety and reliability in production systems.
 
 
 ---
@@ -34,7 +25,7 @@ Systems software engineer, with 1-2 years of rust development experience, design
 
 **Cloud:** Azure (Synapse, Functions, Data Lake, Event Hub), AWS (S3, EC2), GCP (DataProc, BigQuery)
 
-**Also:** Type-driven development; Rust smart-contract integration (sui and cosmos sdks);
+**Also:** Rust smart-contract integration (sui and cosmos sdks);
 
 ---
 ## Experience
@@ -43,27 +34,21 @@ Systems software engineer, with 1-2 years of rust development experience, design
 **Mar 2025 – Present**
 
 
-Co-engineered and -architected, a new energy aggregator platform — a market- and hardware-agnostic SDK built on a highly composable, pluggable actor-model architecture for real-time bidding of grid capacity with capability to be parallely implemented across multiple TSO (Transmission Service Operator) regions, standardising energy financial transactions. Influenced both the technical architecture and business direction of the platform in line with the company's immediate goals and long term vision, building a robust set of system primitives to consistently and quickly bootstrap electrical aggregators.
+Co-engineering a new energy aggregator platform, as part of a 2-person Rust team, a market- and hardware-agnostic SDK built on a composable, pluggable actor-model architecture for low-latency energy bidding with capability to be parallely bootstrapped and deployed across multiple TSO (Transmission Service Operator) across different regions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
 
+- Proposed the actor-model architecture to unify implementation, business/functional requirements and documentation, enabling effective tracking of current and future requirements/specification changes;
 
-/* LLM AGENT EDITING AREA
-LLM AGENT instruction: I am still doing some reworking. give a review of this editing area, according to the profile I am targeting. should I change anything? should I add anything?
-
-
-- Designed and implemented an actor-model application in Rust on tokio and PostgreSQL (sqlx), using functorial/monadic layering to strictly segment responsibilities across framework layers; chose the actor-model to unify implementation, business/functional requirements and technical spec documentation, enabling effective tracking of current and future requirements changes.
-
-- Leveraged the actor model's modularity and composability to support genericity across markets and hardware vendors, allowing new aggregator deployments to be assembled from existing, pluggable components rather than rebuilt from scratch.
-
-*/
+- Co-designed and implemented core framework components in Rust on tokio and PostgreSQL (sqlx), using functorial (clean) layering to strictly segment responsibilities across framework core components;
 
 
 - Engineered robust IO-bounded concurrency model, leveraging tokio primitives, with fault-tolerant supervision of running instances and their internal resources;
 
-- Setup comprehensive unit testing coverage across framework's components and functional requirements driven integration testing and aligned with the actor-model;
+- Setup comprehensive unit testing coverage across framework's primitives as well as integration testing (and technical documentation) tightly aligned with functional requirements;
 
 - Installed a monitoring and alerting layer, leveraging OpenTelemetry and Grafana, to trace application and business operations, and handle to certain kinds of runtime errors;
 
-- Currently in integration testing with an European TSO;
+- Reached integration testing stage with an EU-based energy market, the team's key delivery milestone for the year.
+
 
 ---
 ### Software Engineer - National Robotarium - Edinburgh, UK
@@ -75,7 +60,7 @@ Worked across a portfolio of industrial production-driven AI and Robotics R&D pr
 
 - Integrated a real-time robotic QA system improving labelling defect detection by 30% over trained human inspectors, saving the client's ~£200k/year;
 
-- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; IP owned by Honda Research's LLM division;
+- Designed a novel turn-taking detection algorithm improving conversation completion rates by 13%; later adopted by car manufactorer's client LLM division;
 
 - Lead development of cloud data platform, for oil rig automated video-based inspections, leveraging Azure Synapse, Terraform-automated infrastructure, and a WebAssembly Blazor frontend;
 
