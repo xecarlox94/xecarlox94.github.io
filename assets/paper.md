@@ -48,7 +48,7 @@ Co-engineering a new energy aggregator platform, as part of a 2-person Rust team
 
 
 ---
-### Software Engineer at National Robotarium - Edinburgh, UK
+### Software Engineer at Robotarium - Edinburgh, UK
 **Nov 2022 – Mar 2025**
 
 Worked across a portfolio of industrial production-driven AI and Robotics R&D projects for major UK industrial clients, progressing to project lead engineer;
@@ -81,7 +81,7 @@ Proprietary Haskell application (nixified infrastructure) that ingests in-match 
 Contributed to software architecture and system integration planning. Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. 
 
 **Docker Development & Deployment environment** - Internal tooling
-Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, while at National Robotarium; included Nvidia runtime and X11 desktop application support.
+Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, while at Robotarium; included Nvidia runtime and X11 desktop application support.
 
 
 ---

@@ -95,13 +95,20 @@
 
 \sectionTitle{Professional Summary}
 
-summary
+\noindent Rust systems software engineer, with 3\-4 years of overall experience, currently focused on concurrent, fault\-tolerant distributed systems for critical infrastructure, using tailored architectures, asynchronous programming and industrial communication protocols (HTTP\/REST, Protobuf). Previously progressed into an engineering\-lead role across multi\-disciplinary engineering teams to deliver measurable production outcomes in domains such as robotics, computer vision and cloud data engineering. Strong interest in type\-driven development and formal verification methods as enablers of safety and reliability in production systems.
 
 \sectionTitle{Technical Skills}
 
 \UList{
-  \item \textbf{Languages}: 
-  \item \textbf{Systems Engineering}: 
+  \item \textbf{Rust}: async\/await, tokio (channels, select, cancellation tokens, task trackers), sqlx, testing, smart-contract integration (Sui, Cosmos SDKs);
+
+  \item \textbf{Languages}: Rust, Haskell, Ocaml, Python, Java, C\/C\+\+;
+
+  \item \textbf{Systems}: Linux, Nix, Docker, RaspberryPi GPIO, Nvidia Jetson, WebAssembly, HTTP\/REST, WebSockets, Protobuf, gRPC, OpenTelemetry, Grafana;
+
+  \item \textbf{Databases}: PostgreSQL, Azure SQL, NoSQL;
+
+  \item \textbf{Cloud}: Azure (Synapse, Functions, Event Hub), AWS (S3, EC2), Terraform;
 }
 
 
@@ -109,21 +116,33 @@ summary
 \sectionTitle{Experience}
 
 \subsection{(052025 -) Rust Software Engineer \hfill \makebox[0pt][c]{Enoda Ltd}  \hfill Edinburgh, UK}
-\UList{
 
-  \item \textbf{Project Lead Engineer} - Automated Clothing Visual Inspection - \textbf{ACS Clothing} (2024-2025)
-  \UList{
-    \item item
-  }
+\noindent Co\-engineering a new energy aggregator platform, as part of a 2\-person Rust team, a market\- and hardware\-agnostic SDK, built on a composable, pluggable actor\-model architecture for real\-time energy bidding. The platform is designed to be bootstrapped and deployed, in parallel, across multiple TSOs (Transmission Service Operator) in different jurisdictions. Given the platform's long production timeline, the team's primary goal (and key metric) this year is reaching integration testing with an energy market.
+
+\UList{
+  \item Proposed, and then co\-designed an actor\-model architecture to unify implementation, business\/functional requirements and documentation, enabling effective tracking of current and future requirements\/specification changes;
+
+  \item Co\-designed and implemented core framework components in Rust on tokio and PostgreSQL (sqlx), using a clean separation of concerns across framework layers;
+
+  \item Engineered robust I\/O\-bound concurrency model, leveraging tokio primitives, with fault\-tolerant supervision of running instances and their internal resources;
+
+  \item Set up comprehensive unit testing coverage across framework's primitives as well as integration testing (and technical documentation) tightly aligned with functional requirements;
+
+  \item Installed a monitoring and alerting layer, leveraging OpenTelemetry and Grafana, to trace application and business operations, and handle certain kinds of runtime errors;
+
+  \item Reached integration testing stage with an EU-based energy market, the team's key delivery milestone for the year.
 }
 
-\subsection{(112022 - 052025) Software Engineer \hfill \makebox[0pt][c]{National Robotarium}  \hfill Edinburgh, UK}
-\UList{
+\subsection{(112022 - 052025) Software Engineer \hfill \makebox[0pt][c]{Robotarium}  \hfill Edinburgh, UK}
 
-  \item \textbf{Project Lead Engineer} - Automated Clothing Visual Inspection - \textbf{ACS Clothing} (2024-2025)
-  \UList{
-    \item item
-  }
+\noindent Worked across a portfolio of industrial production\-driven AI and Robotics R\&D projects for major UK industrial clients, progressing to project lead engineer;
+
+\UList{
+  \item Developed a turn\-taking detection algorithm for an automotive conversational application which improved conversation completion rates by 13\%, reported by a car manufacturer's internal experiments;
+  \item Integrated a real\-time robotic bottle defect QA system improving issue detection by an estimate of 30\% over trained human inspectors and saving ~£200k\/year, according to the client's reports;
+  \item Contributed to development of cloud data platform, for oil rig automated inspections, leveraging Azure Synapse, Terraform\-automated infrastructure, and a WebAssembly Blazor frontend;
+  \item Led a team to deliver a computer\-vision garment defect detection system (using AWS) achieving 87\% IoU, with the client forecasting overall productivity improvement by 2\%.
+
 }
 
 \sectionTitle{Education}
@@ -135,25 +154,19 @@ summary
 
 \sectionTitle{Relevant Projects}
 
-\Project{<TODO: add own project>}
+\Project{Football Analytics Engine}
 {
-  \UList{
-    \item item
-  }
+  \noindent Proprietary Haskell application (nixified infrastructure) that ingests in-match football event streams and derives performance metrics distinct from standard commercial offerings. Personal entrepreneurial project targeting eventual commercial launch.
 }
 
-\Project{Open-Source Contributor - P2PRC}
+\Project{Open-Source Contributor \- P2PRC}
 {
-  \UList{
-    \item item
-  }
+  \noindent Contributed to software architecture and system integration planning. Developed and maintained the Haskell language API layer. Managed builds, development environments, and deployments with Nix. 
 }
 
-\Project{Bash Framework - Tooling}
+\Project{Docker Development \& Deployment environment}
 {
-  \UList{
-    \item item
-  }
+  \noindent Developed a lightweight Bash framework that standardised Docker development and deployment workflows across multiple contracted projects, while at Robotarium; included Nvidia runtime and X11 desktop application support.
 }
 
 \sectionTitle{Languages}
